@@ -5,7 +5,7 @@ This is a documentation of all the practical and concept clearance exercises l w
 ## HTML Code
 Please share suggestions for code restructuring
 
-````
+````html
 <!DOCTYPE html>
 <html lang="en">
   <head>
