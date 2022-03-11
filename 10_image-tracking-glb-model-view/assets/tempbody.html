@@ -1,0 +1,112 @@
+<!-- Copyright (c) 2022 8th Wall, Inc. -->
+<!-- body.html is optional; elements will be added to your html body after app.js is loaded. -->
+
+<a-scene
+  landing-page
+  xrextras-loading
+  xrextras-runtime-error2
+  xrextras-gesture-detector
+  renderer="colorManagement:true;"
+  xrweb
+>
+  <a-assets>
+    <a-asset-item
+      id="light-blue_dress-glb"
+      src="./assets/light-blue_dress.glb"
+    ></a-asset-item>
+    <a-asset-item
+      id="pink_dress-glb"
+      src="./assets/pink_dress.glb"
+    ></a-asset-item>
+    <a-asset-item
+      id="pistachio_dress-glb"
+      src="./assets/pistachio_dress.glb"
+    ></a-asset-item>
+  </a-assets>
+  <a-camera
+    id="camera"
+    position="0 4 10"
+    raycaster="objects: .cantap"
+    cursor="fuse: false; rayOrigin: mouse;"
+  >
+  </a-camera>
+
+  <a-light type="directional" intensity="0.5" position="1 1 1"></a-light>
+
+  <a-light type="ambient" intensity="0.7"></a-light>
+  <!--<a-light-->
+  <!--  light="type: directional;-->
+  <!--         intensity: 0.8;-->
+  <!--         castShadow: true;-->
+  <!--         shadowMapHeight:2048;-->
+  <!--         shadowMapWidth:2048;-->
+  <!--         shadowCameraTop: 10;-->
+  <!--         target: #pistachio_dress-model;"-->
+  <!--      position="1 4.3 2.5"-->
+  <!--      xrextras-attach="target: model;"-->
+  <!--      shadow>-->
+  <!--</a-light>-->
+  <!--<a-light-->
+  <!--  light="type: directional;-->
+  <!--         intensity: 0.8;-->
+  <!--         castShadow: true;-->
+  <!--         shadowMapHeight:2048;-->
+  <!--         shadowMapWidth:2048;-->
+  <!--         shadowCameraTop: 10;-->
+  <!--         target: #light-blue_dress-model;"-->
+  <!--  position="1 4.3 2.5"-->
+  <!--  xrextras-attach="target: model;"-->
+  <!--  shadow>-->
+  <!--</a-light>-->
+  <!--<a-light-->
+  <!--  light="type: directional;-->
+  <!--         intensity: 0.8;-->
+  <!--         castShadow: true;-->
+  <!--         shadowMapHeight:2048;-->
+  <!--         shadowMapWidth:2048;-->
+  <!--         shadowCameraTop: 10;-->
+  <!--         target: #pink_dress-model;"-->
+  <!--  position="1 4.3 2.5"-->
+  <!--  xrextras-attach="target: model; "-->
+  <!--  shadow>-->
+  <!--</a-light>-->
+
+  <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
+  <xrextras-named-image-target name="film-image-target">
+    <!-- Add a child entity that can be gestured independently of the image target. -->
+    <a-entity
+      id="light-blue_dress-model"
+      gltf-model="#light-blue_dress-glb"
+      position="0 -0.7 0"
+      class="cantap"
+      scale="0.6 0.6 0.6"
+    >
+    </a-entity>
+  </xrextras-named-image-target>
+  <xrextras-named-image-target name="3_idiots-image-target">
+    <!--Add a child entity that can be gestured independently of the image target. -->
+    <a-entity
+      id="pink_dress-model"
+      gltf-model="#pink_dress-glb"
+      position="0 -0.7 0"
+      class="cantap"
+      scale="0.6 0.6 0.6"
+    >
+    </a-entity>
+  </xrextras-named-image-target>
+  <xrextras-named-image-target name="cricket-image-target">
+    <!--Add a child entity that can be gestured independently of the image target. -->
+    <!--<a-plane id="ground" position="0 0 -0.3" rotation="-90 0 0" width="50" height="50" material="shader: shadow" shadow>-->
+    <!--rotation="180 0  0"-->
+    <a-entity
+      id="pistachio_dress-model"
+      gltf-model="#pistachio_dress-glb"
+      position="0 -0.9 0"
+      class="cantap"
+      scale="0.6 0.6 0.6"
+    >
+    </a-entity>
+    <!--</a-plane>-->
+  </xrextras-named-image-target>
+  <!--<a-plane id="ground" position="0 0 -0.3" rotation="-90 0 0" width="50" height="50" material="shader: shadow" shadow></a-plane>-->
+</a-scene>
