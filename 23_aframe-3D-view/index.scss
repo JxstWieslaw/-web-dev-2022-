@@ -1,0 +1,186 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Slab', serif;
+}
+#main {
+  background: #3d3d3d;
+	width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font: 30px/300px;
+  position: relative;
+	overflow: hidden;
+  
+  -webkit-perspective: 240px;
+  perspective: 240px;
+  
+  -webkist-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+	
+	display: flex;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	
+	.title {
+		color: #c9c9c9;
+		margin-bottom: 300px;
+		h1 {
+			font-size: 32px;
+			line-height: 46px;
+			padding: 0;
+			margin: 10px 0;
+			font-weight: 900;
+		}
+		p {
+			font-size: 14px;
+			line-height: 28px;
+			padding: 0;
+			margin: 10px 0;
+			font-weight: 100;
+			color: #9c9c9c;
+		}
+	}
+	
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 50%;
+		left: 50%;
+		margin-top: 120px;
+		margin-left: -50px;
+		background-color: rgba(0,0,0,0.4);
+		border-radius: 200px;
+		z-index: 1;
+  
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+
+		-webkit-transform-origin: center center;
+		transform-origin: center center;
+
+		transform: rotateX(140deg);
+		box-shadow: 0 0 40px #000;
+		
+		-webkit-transition: all 0.3s cubic-bezier(0,1.5,.5,1); 
+		transition: all 0.3s cubic-bezier(0,1.5,.5,1); 
+	}
+	
+	&.expand-shadow {
+		&:after {
+			transform: rotateX(140deg) scale(2);
+			opacity: 0.45;
+		}
+	}
+}
+
+#panObject {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+	
+	z-index: 2;
+	
+	&.thrown {
+		-webkit-transition: all 3s cubic-bezier(0,1.5,.5,1); 
+		transition: all 3s cubic-bezier(0,1.5,.5,1); 
+	}
+  
+  .panObject-side {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #e8e8e8;
+    box-shadow: inset 0px 0px 40px rgba(0,0,0,0.2);
+    // border: 1px solid #b6b6b6;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+		
+		background-image: url('http://i.imgur.com/fCL6MwP.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+    
+    -webkit-transition: all 0.3s cubic-bezier(0,1.5,.5,1);
+    transition: all 0.3s cubic-bezier(0,1.5,.5,1);
+    
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+		
+		span {
+			font-weight: 900;
+			font-size: 52px;
+			color: rgba(0,0,0,0.8);
+			text-shadow: 0px 1px 0px rgba(255,255,255,0.15);
+		}
+    
+    &.panObject-side-back {
+      transform: translateZ(-60px) rotateY(180deg);
+    }
+    &.panObject-side-right {
+      transform: rotateY(-270deg) translateX(60px);
+      transform-origin: top right;
+    }
+    &.panObject-side-left {
+      transform: rotateY(270deg) translateX(-60px);
+      transform-origin: center left;
+    }
+    &.panObject-side-top {
+      transform: rotateX(-90deg) translateY(-60px);
+      transform-origin: top center;
+    }
+    &.panObject-side-bottom {
+      transform: rotateX(90deg) translateY(60px);
+      transform-origin: bottom center;
+    }
+    &.panObject-side-front {
+      transform: translateZ(60px);
+    }
+  }
+  
+  &.expand {
+    .panObject-side {
+      &.panObject-side-back {
+        transform: translateZ(-120px) rotateY(180deg);
+      }
+      &.panObject-side-right {
+        transform: rotateY(-270deg) translateX(60px) translateZ(60px);
+        transform-origin: top right;
+      }
+      &.panObject-side-left {
+        transform: rotateY(270deg) translateX(-60px) translateZ(60px);
+        transform-origin: center left;
+      }
+      &.panObject-side-top {
+        transform: rotateX(-90deg) translateY(-60px) translateZ(-60px);
+        transform-origin: top center;
+      }
+      &.panObject-side-bottom {
+        transform: rotateX(90deg) translateY(60px) translateZ(-60px);
+        transform-origin: bottom center;
+      }
+      &.panObject-side-front {
+        transform: translateZ(120px);
+      }
+    }
+  }
+}
