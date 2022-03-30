@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/gesture-detector.js"></script>
+    <script src="js/gesture-handler.js"></script>
+<!--     <script src="js/play-pause.js"></script> -->
+    <script>
+          AFRAME.registerComponent("play-pause", {
+          init: function() {
+              var myVideo = document.querySelector("#play-video");
+              var videoControls = document.querySelector("#videoControls");
+              videoControls.addEventListener('click', function(){
+                  if(myVideo.pause()){
+                      myVideo.play();
+                      videoControls.setAttribute('src', '#pause');
+                  }else {
+                      myVideo.pause();
+                      videoControls.setAttribute('src', '#play');
+                  }
+              });
+          }
+      });
+    </script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <a-scene play-button gesture-detector>
+      <div
+        id="playagain"
+        class="action inactive"
+        style="
+          display: none;
+          z-index: 10;
+          bottom: 6vh;
+          background-color: #3a3b55;
+        "
+      >
+        <h2>Replay Animation</h2>
+      </div>
+      <div
+        id="playbutton"
+        class="action"
+        style="display: none; bottom: 6vh; background-color: #ad50ff"
+      >
+        <h2>Play Animation</h2>
+      </div>
+
+      <!-- We can define assets here to be loaded when A-Frame initializes -->
+      <a-assets>
+        <a-asset-item
+          response-type="arraybuffer"
+          id="animatedModel"
+          src="https://cdn.glitch.global/8f354729-79d3-4379-bb90-de207c22fc6a/wedding-starting-animations_prelease-1K_4.glb?v=1647436395930"
+        ></a-asset-item>
+        <img
+             crossorigin="anonymous"
+          id="skyTexture"
+          src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Fsechelt.jpg?1490307995926"
+        />
+        <audio
+          id="audio"
+      
+          src="https://cdn.glitch.global/8f354729-79d3-4379-bb90-de207c22fc6a/audio_raataan-lambiyan_full_1.mp3?v=1647498438235"
+        ></audio>
+        <img
+          id="jelly-thumb"
+          src="https://cdn.glitch.global/8f354729-79d3-4379-bb90-de207c22fc6a/video-thumbnail.jpg?v=1647497592151"
+        />
+        <img
+             crossorigin="anonymous"
+          id="pause"
+          src="https://cdn.glitch.global/8f354729-79d3-4379-bb90-de207c22fc6a/Pause%20Logo.png?v=1647511399584"
+        />
+        <img
+             crossorigin="anonymous"
+          id="play"
+          src="https://cdn.glitch.global/8f354729-79d3-4379-bb90-de207c22fc6a/play.png?v=1647504620038"
+        />
+        <video
+               crossorigin="anonymous"
+                  autoplay
+         muted
+          id="jelly-video"
+          loop="true"
+          src="https://cdn.glitch.global/8f354729-79d3-4379-bb90-de207c22fc6a/jellyfish-video.mp4?v=1647497593405"
+        ></video>
+      </a-assets>
+
+      <a-sound src="#audio" autoplay="false" loop="true"> </a-sound>
+      <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
+      <a-camera
+        id="camera"
+        raycaster="objects: .cantap"
+        cursor="
+      fuse: false;
+      rayOrigin: mouse;"
+        emitevents="true"
+      >  
+        <a-video webkit-playsinline playsinline id="play-video" src="#jelly-video" width="3.1284" height="6" position="0.07814 1.2 -4.89796" geometry="width: 3.128">
+          <a-image  id="videoControls" src="#play" position="0.08848 -3.10759 0.6548" scale="0.5 0.5 1" play-pause>
+          </a-image>
+        </a-video>
+</a-camera>
+            
+
+        <a-entity
+                  visible="false"
+          id="model"
+          position="0.68 -1 -6"
+          rotation="30 0 0"
+          gltf-model="#animatedModel"
+          class="cantap"
+          scale="0.8 0.8 0.8"
+          animation-mixer="clip: All Animations; loop: repeat;timeScale: 0"
+          gesture-handler
+        >
+        </a-entity>
+      
+      <!--             <a-entity id="model" position="1.3 -1 -6" rotation="29.999999999999996 0 0" gltf-model="https://cdn.glitch.global/07557553-2fde-4100-ab22-5b85a30c51b0/wedding-starting-animations_prelease-1K_3.glb?v=1647332644611" class="cantap" scale="0.8 0.8 0.8" animation-mixer="clip: All Animations; timeScale: 0" pinch-scale="" checkpoint="">
+        </a-entity> -->
+
+      <!--       <a-light type="directional" intensity="0.8" position="1 1 1" light="intensity: 1"></a-light> -->
+      <!--       <a-light type="directional" intensity="0.8" position="0.10787 2.22663 3.83341" light="intensity: 1"></a-light> -->
+      <a-light type="directional" intensity="0.6"></a-light>
+
+      <!-- <a-light type="directional" intensity="0.8" position="0.10787 2.22663 3.83341" light="intensity: 1"></a-light> -->
+      <a-light type="ambient" intensity="1.8"></a-light>
+<!--       <a-sky src="#skyTexture"></a-sky> -->
+      <!--             <a-light
+        type="directional"
+               position="6.475 2.35 0.465"
+               intensity="0.7"
+               target="#model"
+               
+      ></a-light> -->
+
+      <!-- <a-light type="directional" intensity="0.8" position="0.10787 2.22663 3.83341" light="intensity: 1"></a-light> -->
+      <!--       <a-light type="ambient" intensity="0.8" position="7.885 6.5483 8.625" target="#model"></a-light> -->
+      <!--       <a-sky src="#skyTexture"></a-sky> -->
+      <!--       <a-light type="spot" intensity="0.25" position="0 16.085 0"></a-light> -->
+
+      <a-plane
+        id="ground"
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="50"
+        height="50"
+        material="shader: shadow"
+        shadow
+      ></a-plane>
+    </a-scene>
+  </body>
+</html>

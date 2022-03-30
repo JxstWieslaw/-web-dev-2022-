@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+#main {
+  background: #3d3d3d;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font: 30px/300px;
+  position: relative;
+  overflow: hidden;
+  -webkit-perspective: 240px;
+  perspective: 240px;
+  -webkist-perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main .title {
+  color: #c9c9c9;
+  margin-bottom: 300px;
+}
+
+#main .title h1 {
+  font-size: 32px;
+  line-height: 46px;
+  padding: 0;
+  margin: 10px 0;
+  font-weight: 900;
+}
+
+#main .title p {
+  font-size: 14px;
+  line-height: 28px;
+  padding: 0;
+  margin: 10px 0;
+  font-weight: 100;
+  color: #9c9c9c;
+}
+
+#main:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-top: 120px;
+  margin-left: -50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 200px;
+  z-index: 1;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotateX(140deg);
+          transform: rotateX(140deg);
+  -webkit-box-shadow: 0 0 40px #000;
+          box-shadow: 0 0 40px #000;
+  -webkit-transition: all 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+  transition: all 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+}
+
+#main.expand-shadow:after {
+  -webkit-transform: rotateX(140deg) scale(2);
+          transform: rotateX(140deg) scale(2);
+  opacity: 0.45;
+}
+
+#panObject {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  z-index: 2;
+}
+
+#panObject.thrown {
+  -webkit-transition: all 3s cubic-bezier(0, 1.5, 0.5, 1);
+  transition: all 3s cubic-bezier(0, 1.5, 0.5, 1);
+}
+
+#panObject .panObject-side {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #e8e8e8;
+  -webkit-box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("http://i.imgur.com/fCL6MwP.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transition: all 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+  transition: all 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#panObject .panObject-side span {
+  font-weight: 900;
+  font-size: 52px;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15);
+}
+
+#panObject .panObject-side.panObject-side-back {
+  -webkit-transform: translateZ(-60px) rotateY(180deg);
+          transform: translateZ(-60px) rotateY(180deg);
+}
+
+#panObject .panObject-side.panObject-side-right {
+  -webkit-transform: rotateY(-270deg) translateX(60px);
+          transform: rotateY(-270deg) translateX(60px);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+#panObject .panObject-side.panObject-side-left {
+  -webkit-transform: rotateY(270deg) translateX(-60px);
+          transform: rotateY(270deg) translateX(-60px);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+#panObject .panObject-side.panObject-side-top {
+  -webkit-transform: rotateX(-90deg) translateY(-60px);
+          transform: rotateX(-90deg) translateY(-60px);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+#panObject .panObject-side.panObject-side-bottom {
+  -webkit-transform: rotateX(90deg) translateY(60px);
+          transform: rotateX(90deg) translateY(60px);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+#panObject .panObject-side.panObject-side-front {
+  -webkit-transform: translateZ(60px);
+          transform: translateZ(60px);
+}
+
+#panObject.expand .panObject-side.panObject-side-back {
+  -webkit-transform: translateZ(-120px) rotateY(180deg);
+          transform: translateZ(-120px) rotateY(180deg);
+}
+
+#panObject.expand .panObject-side.panObject-side-right {
+  -webkit-transform: rotateY(-270deg) translateX(60px) translateZ(60px);
+          transform: rotateY(-270deg) translateX(60px) translateZ(60px);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+#panObject.expand .panObject-side.panObject-side-left {
+  -webkit-transform: rotateY(270deg) translateX(-60px) translateZ(60px);
+          transform: rotateY(270deg) translateX(-60px) translateZ(60px);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+#panObject.expand .panObject-side.panObject-side-top {
+  -webkit-transform: rotateX(-90deg) translateY(-60px) translateZ(-60px);
+          transform: rotateX(-90deg) translateY(-60px) translateZ(-60px);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+#panObject.expand .panObject-side.panObject-side-bottom {
+  -webkit-transform: rotateX(90deg) translateY(60px) translateZ(-60px);
+          transform: rotateX(90deg) translateY(60px) translateZ(-60px);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+#panObject.expand .panObject-side.panObject-side-front {
+  -webkit-transform: translateZ(120px);
+          transform: translateZ(120px);
+}
+/*# sourceMappingURL=index.css.map */

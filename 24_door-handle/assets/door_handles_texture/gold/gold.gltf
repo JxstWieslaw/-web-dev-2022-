@@ -1,0 +1,260 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1776,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 459,
+      "max": [
+        142.243942260742,
+        158.949615478516,
+        56.7376251220703
+      ],
+      "min": [
+        -8.54703140258789,
+        125.424652099609,
+        26.4376525878906
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 459,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 459,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 2631,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 765,
+      "max": [
+        34.5935935974121,
+        224.755859375,
+        26.9786548614502
+      ],
+      "min": [
+        -15.775691986084,
+        14.2085494995117,
+        15.7928295135498
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 765,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 765,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Substance Painter 7.1.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 7104,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5508,
+      "byteOffset": 7104,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5508,
+      "byteOffset": 12612,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3672,
+      "byteOffset": 18120,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10524,
+      "byteOffset": 21792,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9180,
+      "byteOffset": 32316,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9180,
+      "byteOffset": 41496,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6120,
+      "byteOffset": 50676,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 56796,
+      "uri": "gold.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "lambert2_baseColor.png"
+    },
+    {
+      "uri": "lambert2_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "lambert2_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "name": "lambert2",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "pCube3",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "polySurface3",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2,
+        4
+      ],
+      "name": "Handle_01"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "pCube3"
+    },
+    {
+      "mesh": 0,
+      "name": "pCube3"
+    },
+    {
+      "children": [
+        5
+      ],
+      "name": "polySurface3"
+    },
+    {
+      "mesh": 1,
+      "name": "polySurface3"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
