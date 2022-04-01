@@ -1,33 +1,32 @@
-import React, {Component} from 'react'
-import Table from './Table'
+import React, { Component } from "react";
+import Table from "./Table";
 class App extends Component {
-    render(){
+  render() {
+    const characters = [ /*Array of Objects mimicking JSON format* */
+      {
+        name: "Charlie",
+        job: "Janitor",
+      },
+      {
+        name: "Mac",
+        job: "Bouncer",
+      },
+      {
+        name: "Dee",
+        job: "Aspiring Actress",
+      },
+      {
+        name: "Dennis",
+        job: "Bartender",
+      },
+    ];
 
-        const characters = [
-            {
-                name: 'Charlie',
-                job: 'Janitor',
-            },
-            {
-                name: 'Mac',
-                job: 'Bouncer',
-            },
-            {
-                name: 'Dee',
-                job: 'Aspiring Actress',
-            },
-            {
-                name: 'Dennis',
-                job: 'Bartender',
-            },
-
-        ]
-      return (
-        <div className ="container">
-            <Table />
-        </div>
-      )
-    }
+    return (
+      <div className="container">
+        <Table characterData={characters}/>
+      </div>
+    );
   }
+}
 
-  export default App
+export default App;
