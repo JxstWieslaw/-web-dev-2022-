@@ -2,7 +2,7 @@ var theModel;
 const MODEL_PATH =
   "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/chair.glb?v=1649140664720";
 
-const BACKGROUND_COLOR = 0xf1f1f1;
+const BACKGROUND_COLOR = 0x242424 ;  //0xf1f1f1
 var cameraFar = 5;
 const scene = new THREE.Scene();
 // Set background
@@ -36,7 +36,7 @@ cupLoader.load(
     // Offset the y position a bit
     cupModel.position.y = -1;
 
-    removeCupObjects(replace);
+    // removeCupObjects(replace);
 
     // Add the model to the scene
     scene.add(cupModel);
@@ -60,9 +60,9 @@ loader.load(
       }
     });
 
-    for (let object of CHILD_OBJECTS) {
-      removeChairObjects(theModel, cupModel, object);
-    }
+    // for (let object of CHILD_OBJECTS) {
+    //   removeChairObjects(theModel, cupModel, object);
+    // }
     // Set the models initial scale
     theModel.scale.set(2, 2, 2);
 
@@ -81,22 +81,22 @@ loader.load(
   }
 );
 
-function removeCupObjects(replace) {
-  replace.traverse((o) => {
-    if (o.isMesh) {
-      o.visible = true;
-    }
-  });
-}
+// function removeCupObjects(replace) {
+//   replace.traverse((o) => {
+//     if (o.isMesh) {
+//       o.visible = true;
+//     }
+//   });
+// }
 
 
-function removeChairObjects(parent, replace, element) {
-  parent.traverse((o) => {
-    if (o.isMesh) {
-      if (o.name === "cushions") {
-        const x_pos = o.position.x;
-        const y_pos = o.position.y;
-        const z_pos = o.position.z;
+// function removeChairObjects(parent, replace, element) {
+//   parent.traverse((o) => {
+//     if (o.isMesh) {
+//       if (o.name === "cushions") {
+//         const x_pos = o.position.x;
+//         const y_pos = o.position.y;
+//         const z_pos = o.position.z;
 
         // replace.position.x = x_pos;
         // replace.position.y = y_pos;
@@ -111,12 +111,12 @@ function removeChairObjects(parent, replace, element) {
         //         }               
         //     }
         // });
-        console.log("element exists", element); // runs a call to remove the legs
-        o.visible = false;
-      }
-    }
-  });
-}
+//         console.log("element exists", element); // runs a call to remove the legs
+//         o.visible = false
+//       }
+//     }
+//   });
+// }
 
 // Add lights
 var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.61);

@@ -1,6 +1,7 @@
 const LOADER = document.getElementById("js-loader");
 const DRAG_NOTICE = document.getElementById("js-drag-notice");
 const TRAY = document.getElementById("js-tray-slide");
+const OBJECTS = document.getElementById("js-objects-slide");
 
 const colors = [
   {
@@ -184,6 +185,57 @@ const colors = [
     color: "438AAC",
   },
 ];
+
+const elements = [
+  {
+    icon:
+      "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/wood_.jpg?v=1649144910756",
+    size: [2, 2, 2],
+    shininess: 60,
+  },
+  {
+    icon:
+      "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/fabric_.jpg?v=1649144905001",
+    size: [4, 4, 4],
+    shininess: 0,
+  },
+  {
+    icon:
+      "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/pattern_.jpg?v=1649144906757",
+    size: [8, 8, 8],
+    shininess: 10,
+  },
+  {
+    icon:
+      "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/denim_.jpg?v=1649144904412",
+    size: [3, 3, 3],
+    shininess: 0,
+  },
+  {
+    icon:
+      "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/quilt_.jpg?v=1649144908805",
+    size: [6, 6, 6],
+    shininess: 0,
+  },
+  {
+    icon:
+      "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/hammer_arm.png?v=1649487674922",
+    size: [6, 6, 6],
+    shininess: 0,
+  },
+  {
+    icon:
+      "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/shoulder_arm.png?v=1649487678196",
+    size: [6, 6, 6],
+    shininess: 0,
+  },
+  {
+    icon:
+      "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/robot_arm.png?v=1649487682124",
+    size: [6, 6, 6],
+    shininess: 0,
+  },
+]
 
 var cameraFar = 5;
 
@@ -380,14 +432,14 @@ function buildColors(colors) {
 
 buildColors(colors);
 
-// Swatches
-const swatches = document.querySelectorAll(".tray__swatch");
+// Color and Texture Swatches
+const color_swatches = document.querySelectorAll(".tray__swatch");
 
-for (const swatch of swatches) {
-  swatch.addEventListener("click", selectSwatch);
+for (const swatch of color_swatches) {
+  swatch.addEventListener("click", selectColorSwatch);
 }
 
-function selectSwatch(e) {
+function selectColorSwatch(e) {
   let color = colors[parseInt(e.target.dataset.key)];
   let new_mtl;
 
@@ -412,6 +464,54 @@ function selectSwatch(e) {
   setMaterial(theModel, activeOption, new_mtl);
 }
 
+function buildParts(elements) {
+  for (let [i, element] of elements.entries()) {
+    let swatch = document.createElement("div");
+    swatch.classList.add("objects__swatch");
+
+    if (element.icon)
+      swatch.style.backgroundImage = "url(" + element.icon + ")";
+
+    swatch.setAttribute("data-key", i);
+    OBJECTS.append(swatch);
+  }
+}
+
+buildParts(elements);
+
+// Model swatches
+const model_swatches = document.querySelectorAll(".tray__swatch");
+
+for (const swatch of model_swatches) {
+  swatch.addEventListener("click", selectModelSwatch);
+}
+
+function selectModelSwatches(e) {
+  let color = colors[parseInt(e.target.dataset.key)];
+  let new_mtl;
+
+  if (color.texture) {
+    let txt = new THREE.TextureLoader().load(color.texture);
+
+    txt.repeat.set(color.size[0], color.size[1], color.size[2]);
+    txt.wrapS = THREE.RepeatWrapping;
+    txt.wrapT = THREE.RepeatWrapping;
+
+    new_mtl = new THREE.MeshPhongMaterial({
+      map: txt,
+      shininess: color.shininess ? color.shininess : 10,
+    });
+  } else {
+    new_mtl = new THREE.MeshPhongMaterial({
+      color: parseInt("0x" + color.color),
+      shininess: color.shininess ? color.shininess : 10,
+    });
+  }
+
+  setMaterial(theModel, activeOption, new_mtl);
+}
+
+
 // Select Option
 const options = document.querySelectorAll(".option");
 
@@ -421,9 +521,7 @@ for (const option of options) {
 
 function selectOption(e) {
   let option = e.target;
-  console.log(option)
   activeOption = e.target.dataset.option;
-  console.log(activeOption)
   for (const otherOption of options) {
     otherOption.classList.remove("--is-active");
   }
@@ -431,7 +529,6 @@ function selectOption(e) {
 }
 
 function setMaterial(parent, type, mtl) {
-  // console.log(parent)
   parent.traverse((o) => {
     if (o.isMesh && o.nameID != null) {
       if (o.nameID == type) {

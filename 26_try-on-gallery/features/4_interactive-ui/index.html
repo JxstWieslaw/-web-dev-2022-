@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/favicon.ico?v=1649139116641"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- toggleLeg selector -->
+    <div class="attachment attachment-legs" onclick="toggleLegsMenu()">
+      <div class="attachment__button-content">
+        <div class="add-sign">
+          <div class="add-sign-plus add-sign-legs">+</div>
+        </div>
+      </div>
+    </div>
+    <!-- choices -->
+    <div class="choices leg-choices">
+      <div class="attachment-choices attachment-choices-legs">
+        <div class="choice" onclick="applyLegs(1)">
+          <svg
+            class="pegleg-svg"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17 4H7v3h10V4zM7 3a1 1 0 00-1 1v3a1 1 0 001 1h10a1 1 0 001-1V4a1 1 0 00-1-1H7z"
+              fill="#fff"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M14 8h-4v4h4V8zm-4-1a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1h-4z"
+              fill="#fff"
+            />
+            <path d="M11 13h2v7h-2v-7zM10 20h4v1h-4v-1z" fill="#fff" />
+          </svg>
+        </div>
+        <div class="choice" onclick="applyLegs(0)">
+          <svg
+            class="leg-svg"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6 4.5A1.5 1.5 0 017.5 3H12a1.5 1.5 0 011.5 1.5v10a.5.5 0 00.5.5h3a1.5 1.5 0 011.5 1.5v3A1.5 1.5 0 0117 21H7.5A1.5 1.5 0 016 19.5v-15zM7.5 4a.5.5 0 00-.5.5V9h5.5V4.5A.5.5 0 0012 4H7.5zm5 6H7v9.5a.5.5 0 00.5.5H17a.5.5 0 00.5-.5v-3a.5.5 0 00-.5-.5h-3a1.5 1.5 0 01-1.5-1.5V10z"
+              fill="#fff"
+            />
+          </svg>
+        </div>
+    </div>
+
+    <!-- The canvas element is used to draw the 3D scene -->
+    <canvas id="c"></canvas>
+    <!-- The main Three.js file -->
+    <script src="https://unpkg.com/three@0.127.0/build/three.js"></script>
+
+    <!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js"></script>
+
+    <!-- This is a simple to use extension for Three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
