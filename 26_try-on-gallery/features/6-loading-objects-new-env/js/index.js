@@ -249,6 +249,8 @@ const INITIAL_MAP = [
   { childID: "supports", mtl: INITIAL_MTL },
 ];
 
+
+//Objects for model 1
 var left_hand1;
 function leftHand1() {
   const group = new THREE.Group();
@@ -325,6 +327,154 @@ function rightHand1() {
   return group;
 }
 
+//Remaining objects for the model
+var left_leg1;
+function leftLeg1() {
+  const group = new THREE.Group();
+  // Init the object loader
+  var loader = new THREE.GLTFLoader();
+  const MODEL_PATH =
+    "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/left%20leg1.glb?v=1649414721554";
+  loader.load(
+    MODEL_PATH,
+    function (gltf) {
+      left_leg1 = gltf.scene;
+      // traverse and add ability to cast and receive shadows to each object in 3D model
+      left_leg1.traverse((o) => {
+        if (o.isMesh) {
+          o.castShadow = true;
+          o.receiveShadow = true;
+        }
+      });
+
+      // Set the models initial scale
+      left_leg1.scale.set(0.188, 0.188, 0.188);
+
+      // Offset the y position a bit
+      left_leg1.position.set(0.102, -1, 0.055);
+      // // Add the model to the Three.Group()
+      group.add(left_leg1);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  // console.log(group)
+  return group;
+}
+
+var right_leg1;
+function rightLeg1() {
+  const group = new THREE.Group();
+  // Init the object loader
+  var loader = new THREE.GLTFLoader();
+  const MODEL_PATH =
+    "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/right%20leg1.glb?v=1649414728156";
+  loader.load(
+    MODEL_PATH,
+    function (gltf) {
+      right_leg1 = gltf.scene;
+      // traverse and add ability to cast and receive shadows to each object in 3D model
+      right_leg1.traverse((o) => {
+        if (o.isMesh) {
+          o.castShadow = true;
+          o.receiveShadow = true;
+        }
+      });
+
+      // Set the models initial scale
+      right_leg1.scale.set(0.188, 0.188, 0.188);
+
+      // Offset the y position a bit
+      right_leg1.position.set(0.102, -1, 0.055);
+      // // Add the model to the Three.Group()
+      group.add(right_leg1);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  // console.log(group)
+  return group;
+}
+
+var head1;
+function head_1() {
+  const group = new THREE.Group();
+  // Init the object loader
+  var loader = new THREE.GLTFLoader();
+  const MODEL_PATH =
+    "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/head%201.glb?v=1649414715714";
+  loader.load(
+    MODEL_PATH,
+    function (gltf) {
+      head1 = gltf.scene;
+      // traverse and add ability to cast and receive shadows to each object in 3D model
+      head1.traverse((o) => {
+        if (o.isMesh) {
+          o.castShadow = true;
+          o.receiveShadow = true;
+        }
+      });
+
+      // Set the models initial scale
+      head1.scale.set(0.188, 0.188, 0.188);
+
+      // Offset the y position a bit
+      head1.position.set(0.102, -1, 0.055);
+      // // Add the model to the Three.Group()
+      group.add(head1);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  // console.log(group)
+  return group;
+}
+
+var body1;
+function body_1() {
+  const group = new THREE.Group();
+  // Init the object loader
+  var loader = new THREE.GLTFLoader();
+  const MODEL_PATH =
+    "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/body1.glb?v=1649414698793";
+  loader.load(
+    MODEL_PATH,
+    function (gltf) {
+      body1 = gltf.scene;
+      // traverse and add ability to cast and receive shadows to each object in 3D model
+      body1.traverse((o) => {
+        if (o.isMesh) {
+          o.castShadow = true;
+          o.receiveShadow = true;
+        }
+      });
+
+      // Set the models initial scale
+      body1.scale.set(0.188, 0.188, 0.188);
+
+      // Offset the y position a bit
+      body1.position.set(0.102, -1, 0.055);
+      // // Add the model to the Three.Group()
+      group.add(body1);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  // console.log(goup)
+  return group;
+}
+
+//End of remaining objects
+
+//Objects for model 2
 var right_hand2;
 function rightHand2() {
   const group = new THREE.Group();
@@ -360,6 +510,8 @@ function rightHand2() {
   // console.log(group)
   return group;
 }
+
+
 var left_hand2;
 function leftHand2() {
   const group = new THREE.Group();
@@ -395,6 +547,153 @@ function leftHand2() {
   // console.log(group)
   return group;
 }
+
+//Remaining objects for the model
+var left_leg2;
+function leftLeg2() {
+  const group = new THREE.Group();
+  // Init the object loader
+  var loader = new THREE.GLTFLoader();
+  const MODEL_PATH =
+    "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/left_leg2.glb?v=1649415836910";
+  loader.load(
+    MODEL_PATH,
+    function (gltf) {
+      left_leg2 = gltf.scene;
+      // traverse and add ability to cast and receive shadows to each object in 3D model
+      left_leg2.traverse((o) => {
+        if (o.isMesh) {
+          o.castShadow = true;
+          o.receiveShadow = true;
+        }
+      });
+
+      // Set the models initial scale
+      left_leg2.scale.set(2, 2, 2);
+
+      // Offset the y position a bit
+      left_leg2.position.set(0, -1, 0);
+      // // Add the model to the Three.Group()
+      group.add(left_leg2);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  // console.log(group)
+  return group;
+}
+
+var right_leg2;
+function rightLeg2() {
+  const group = new THREE.Group();
+  // Init the object loader
+  var loader = new THREE.GLTFLoader();
+  const MODEL_PATH =
+    "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/right_leg2.glb?v=1649415836910";
+  loader.load(
+    MODEL_PATH,
+    function (gltf) {
+      right_leg2 = gltf.scene;
+      // traverse and add ability to cast and receive shadows to each object in 3D model
+      right_leg2.traverse((o) => {
+        if (o.isMesh) {
+          o.castShadow = true;
+          o.receiveShadow = true;
+        }
+      });
+
+      // Set the models initial scale
+      right_leg2.scale.set(2, 2, 2);
+
+      // Offset the y position a bit
+      right_leg2.position.set(0, -1, 0);
+      // // Add the model to the Three.Group()
+      group.add(right_leg2);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  // console.log(group)
+  return group;
+}
+
+var head2;
+function head_2() {
+  const group = new THREE.Group();
+  // Init the object loader
+  var loader = new THREE.GLTFLoader();
+  const MODEL_PATH =
+    "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/head2.glb?v=1649415811382";
+  loader.load(
+    MODEL_PATH,
+    function (gltf) {
+      head2 = gltf.scene;
+      // traverse and add ability to cast and receive shadows to each object in 3D model
+      head2.traverse((o) => {
+        if (o.isMesh) {
+          o.castShadow = true;
+          o.receiveShadow = true;
+        }
+      });
+
+      // Set the models initial scale
+      head2.scale.set(2, 2, 2);
+
+      // Offset the y position a bit
+      head2.position.set(0, -1, 0);
+      // // Add the model to the Three.Group()
+      group.add(head2);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  // console.log(group)
+  return group;
+}
+
+var body2;
+function body_2() {
+  const group = new THREE.Group();
+  // Init the object loader
+  var loader = new THREE.GLTFLoader();
+  const MODEL_PATH =
+    "https://cdn.glitch.global/664a87a1-0e47-4a46-87e6-28153d296236/body2.glb?v=1649415813230";
+  loader.load(
+    MODEL_PATH,
+    function (gltf) {
+      body2 = gltf.scene;
+      // traverse and add ability to cast and receive shadows to each object in 3D model
+      body2.traverse((o) => {
+        if (o.isMesh) {
+          o.castShadow = true;
+          o.receiveShadow = true;
+        }
+      });
+
+      // Set the models initial scale
+      body2.scale.set(2, 2, 2);
+
+      // Offset the y position a bit
+      body2.position.set(0, -1, 0);
+      // // Add the model to the Three.Group()
+      group.add(body2);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  // console.log(group)
+  return group;
+}
+
+//End of remaining objects
 
 // Function - Build Colors
 function buildColors(colors) {
@@ -447,8 +746,17 @@ function selectColorSwatch(e) {
   setMaterial(activeOption, new_mtl);
 }
 
-let appliedRightHand = rightHand1();
-let appliedLeftHand = leftHand1();
+let appliedRightHand = rightHand2();
+let appliedLeftHand = leftHand2();
+// let appliedLeftLeg = leftLeg1();
+// let appliedRightLeg = rightLeg1();
+let appliedHead = head_2();
+let appliedBody = body_2();
+// let appliedClothes = clothes1();
+// let appliedTop = top_2();
+// let appliedBottom = bottom_2();
+// let appliedHair = hair_2();
+
 
 function addRightHand() {
   scene.add(appliedRightHand);
@@ -458,12 +766,53 @@ function addLeftHand() {
   scene.add(appliedLeftHand);
 }
 
+// function addRightLeg() {
+//   scene.add(appliedRightLeg);
+// }
+
+// function addLeftLeg() {
+//   scene.add(appliedLeftLeg);
+// }
+
+function addHead() {
+  scene.add(appliedHead);
+}
+
+function addBody() {
+  scene.add(appliedBody);
+}
+
+// function addClothes() {
+//   scene.add(appliedClothes);
+// }
+
+// function addTop() {
+//   scene.add(appliedTop);
+// }
+
+// function addBottom() {
+//   scene.add(appliedBottom);
+// }
+
+// function addHair() {
+//   scene.add(appliedHair);
+// }
+
+
 function draw() {
   scene.remove.apply(scene, scene.children);
   addLights();
   addFloor();
   addLeftHand();
   addRightHand();
+  // addLeftLeg();
+  // addRightLeg();
+  addHead();
+  addBody();
+  // addClothes();
+  // addTop();
+  // addBottom();
+  // addHair();
 }
 
 // // Function - Add the textures to the models
@@ -583,8 +932,8 @@ function selectModelSwatches(e) {
 function setObject(value, objectSelected) {
   console.log(objectSelected);
   const leftHands = {
-    0: leftHand2(),
-    1: leftHand1(),
+    0: leftHand1(),
+    1: leftHand2(),
   };
 
   const rightHands = {
@@ -592,9 +941,55 @@ function setObject(value, objectSelected) {
     1: rightHand1(),
   };
 
-  if (objectSelected === "legs") appliedLeftHand = leftHands[value];
-  else appliedRightHand = rightHands[value];
+  const heads = {
+    0: head_2(),
+    1: head_1(),
+  }
 
+  const rightLegs ={
+    0: rightLeg2(),
+    1: rightLeg1(),
+  }
+
+  const leftLegs ={
+    0: leftLeg2(),
+    1: leftLeg1(),
+  }
+
+  const bodies = {
+    0: body_2(),
+    1: body_1(),
+  }
+
+  // const top = {
+  //   0: top_2(),
+  //   1: top_1(),
+  // }
+
+  // const bottoms = {
+  //   0: bottom_2(),
+  //   1: bottom_1(),
+  // }
+
+  // const hairs = {
+  //   0: hair_2(),
+  //   1: hair_1(),
+  // }
+
+  // const clothes = {
+  //   0: clothes_2(),
+  //   1: clothes_1(),
+  // }
+
+  if (objectSelected === "legs") appliedLeftHand = leftHands[value];
+  else if (objectSelected ==="cushions")appliedRightHand = rightHands[value];
+  else if (objectSelected ==="base")appliedRightLeg = rightLegs[value];
+  else if (objectSelected ==="supports")appliedLeftleg = leftLegs[value];
+  else if (objectSelected ==="body")appliedBody = bodies[value];
+  else if (objectSelected ==="hair")appliedHair = hair[value];
+  else if (objectSelected ==="top")appliedTop = top[value];
+  else if (objectSelected ==="clothes")appliedClothes = clothes[value];
+  else appliedHead = heads[value];
   draw();
 }
 
