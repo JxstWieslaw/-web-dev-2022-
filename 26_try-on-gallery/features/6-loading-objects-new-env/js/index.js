@@ -759,10 +759,12 @@ let appliedBody = body_2();
 
 
 function addRightHand() {
+  appliedRightHand.name="right-hand"
   scene.add(appliedRightHand);
 }
 
 function addLeftHand() {
+  appliedLeftHand.name="light-hand"
   scene.add(appliedLeftHand);
 }
 
@@ -775,10 +777,12 @@ function addLeftHand() {
 // }
 
 function addHead() {
+  appliedHead.name="head"
   scene.add(appliedHead);
 }
 
 function addBody() {
+  appliedBody.name="body"
   scene.add(appliedBody);
 }
 
@@ -813,6 +817,7 @@ function draw() {
   // addTop();
   // addBottom();
   // addHair();
+  console.log(scene.children)
 }
 
 // // Function - Add the textures to the models
@@ -877,10 +882,12 @@ function animate() {
     camera.aspect = canvas.clientWidth / canvas.clientHeight;
     camera.updateProjectionMatrix();
   }
+  console.log(scene.children)
 }
 
 animate();
 draw();
+console.log(scene.children)
 
 // Function - New resizing method
 function resizeRendererToDisplaySize(renderer) {

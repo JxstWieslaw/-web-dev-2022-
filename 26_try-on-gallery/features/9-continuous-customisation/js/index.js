@@ -66,9 +66,13 @@ const INITIAL_MAP = [
 ];
 
 let appliedRightHand = rightHand2();
+// console.log(appliedRightHand)
 let appliedLeftHand = leftHand2();
+// console.log(appliedLeftHand)
 let appliedHead = head_2();
+// console.log(appliedHead)
 let appliedBody = body_2();
+// console.log(appliedBody)
 
 // Select Option
 const options = document.querySelectorAll(".option");
@@ -137,8 +141,53 @@ function setMaterial(selectedObject, mtl) {
   });
 }
 
+
+  // console.log(scene.children[4])
+
 buildParts(elements);
-// console.log(OBJECTS)
+console.log(scene);
+
+// const notes = [
+//   {
+//     id: 1,
+//     content: 'HTML is easy',
+//     date: '2019-05-30T17:30:31.098Z',
+//     important: true
+//   },
+//   {
+//     id: 2,
+//     content: 'Browser can execute only JavaScript',
+//     date: '2019-05-30T18:39:34.091Z',
+//     important: false
+//   },
+//   {
+//     id: 3,
+//     content: 'GET and POST are the most important methods of HTTP protocol',
+//     date: '2019-05-30T19:20:14.298Z',
+//     important: true
+//   }
+// ]
+// console.log(notes)
+// const result = notes.map(note => note.id)
+// console.log(result)
+
+// // traverse array  for Object3Ds then see
+// const currentScene = scene.children;
+// console.log(currentScene);
+
+// const sceneObjects = scene.children.map(obj => obj.name)
+// console.log(sceneObjects)
+// console.log(sceneObjects)
+// mobiles.forEach(mobile => {
+//   for (let key in mobile) {
+//       console.log(`${key}: ${mobile[key]}`);
+//   }
+// });
+// const result = currentScene.map(object => object.name)
+// console.log(result)
+// currentScene.forEach((object) => {
+//   console.log(object.name);
+// });
 
 // Model swatches
 const model_swatches = document.querySelectorAll(".objects__swatch");
@@ -156,17 +205,17 @@ function selectModelSwatches(e) {
   else setObject(value, activeOption);
 }
 
-function setRightHands(value){
+function setRightHands(value) {
   const rightHands = {
     0: rightHand2(),
     1: rightHand1(),
   };
 
   appliedRightHand = rightHands[value];
-  console.log(scene)
+  console.log(scene);
   scene.remove.apply(appliedRightHand, appliedRightHand.children);
   addRightHand();
-  console.log(scene)
+  console.log(scene);
 }
 
 function setObject(value, objectSelected) {
@@ -209,18 +258,24 @@ function setObject(value, objectSelected) {
 }
 
 function addRightHand() {
+  appliedRightHand.name = "right-hand";
+  console.log(appliedLeftHand)
   scene.add(appliedRightHand);
+  console.log(scene.children)
 }
 
 function addLeftHand() {
+  appliedLeftHand.name = "left-hand";
   scene.add(appliedLeftHand);
 }
 
 function addHead() {
+  appliedHead.name = "head";
   scene.add(appliedHead);
 }
 
 function addBody() {
+  appliedBody.name = "body";
   scene.add(appliedBody);
 }
 
@@ -286,15 +341,29 @@ function animate() {
   }
 }
 
+function delete3DOBJ(objName){
+    var selectedObject = scene.getObjectByName(objName);
+    scene.remove( selectedObject );
+    animate();
+}
+
+console.log(scene.children)
 animate();
 draw();
-console.log(scene)
-scene.remove(scene.children[4])
-console.log(scene)
-scene.add(rightHand1())
-console.log(scene.getObjectByProperty('uuid',7285728))
+console.log(appliedLeftHand.geometry)
+appliedLeftHand.parent.remove(appliedLeftHand)
+appliedBody.parent.remove(appliedBody)
+console.log(scene.children)
+// scene.remove( scene.getObjectByName("right-hand"));
+// delete3DOBJ("right-hand");
+// 0
+// console.log(scene.getObjectByName('right-hand'));
+// scene.remove(scene.children[4])
+// console.log(scene)
+// scene.add(rightHand1())
+// console.log(scene.getObjectByProperty('uuid',7285728))
 
-// Function - New resizing 
+// Function - New resizing
 function resizeRendererToDisplaySize(renderer) {
   const canvas = renderer.domElement;
   var width = window.innerWidth;
@@ -309,14 +378,14 @@ function resizeRendererToDisplaySize(renderer) {
   return needResize;
 }
 
-function applyWeapon(value) {
-  const weapons = {
-    0: axe(),
-    1: sword(),
-  };
+// function applyWeapon(value) {
+//   const weapons = {
+//     0: axe(),
+//     1: sword(),
+//   };
 
-  scene.remove.apply(applyedWeapon, applyedWeapon.children);
+//   scene.remove.apply(applyedWeapon, applyedWeapon.children);
 
-  applyedWeapon = weapons[value];
-  addWeapon();
-}
+//   applyedWeapon = weapons[value];
+//   addWeapon();
+// }

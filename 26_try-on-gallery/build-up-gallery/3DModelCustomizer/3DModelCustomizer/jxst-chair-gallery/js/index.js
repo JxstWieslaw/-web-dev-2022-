@@ -345,6 +345,11 @@ function animate() {
 }
 
 animate();
+console.log(scene.getObjectByProperty('name','Scene'))
+// var obj = scene.getObjectByPropery("legs");
+// // scene.remove(scene.children[]);
+
+
 
 // Function - New resizing method
 function resizeRendererToDisplaySize(renderer) {
