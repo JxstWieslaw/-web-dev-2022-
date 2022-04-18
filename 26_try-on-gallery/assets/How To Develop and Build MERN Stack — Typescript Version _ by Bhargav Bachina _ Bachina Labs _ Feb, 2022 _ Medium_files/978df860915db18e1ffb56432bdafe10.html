@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/978df860915db18e1ffb56432bdafe10 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>MERN – Medium</title><meta name="description" content="Instantly share code, notes, and snippets. You can&#39;t perform that action at this time. You signed in with another tab or window. You signed out in another tab or window. Reload to refresh your session. Reload to refresh your session."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body data-new-gr-c-s-loaded="14.1057.0"><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./188312c4e93b5df884d8c2d90773f0e2.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-4dbc2a517d84.css"><div id="gist114817539" class="gist">
+    <div class="gist-file" translate="no">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-createtask-tsx" class="file my-2">
+    
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-tsx  ">
+
+      
+<div class="js-check-bidi js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template"></template>
+<template class="js-line-alert-template"></template>
+
+  <table class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="TSX" data-tagsearch-path="CreateTask.tsx">
+        <tbody><tr>
+          <td id="file-createtask-tsx-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-createtask-tsx-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-smi">React</span> <span class="pl-k">from</span> <span class="pl-s">'react'</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-createtask-tsx-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-s1">useForm</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">"react-hook-form"</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-createtask-tsx-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-smi">TaskService</span><span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'../services/TaskService'</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-createtask-tsx-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-createtask-tsx-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-k">default</span> <span class="pl-k">function</span> <span class="pl-smi">CreateTask</span><span class="pl-kos">(</span><span class="pl-s1">props</span>: <span class="pl-smi">any</span><span class="pl-kos">)</span> <span class="pl-kos">{</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-createtask-tsx-LC6" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-createtask-tsx-LC7" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-kos">{</span> register<span class="pl-kos">,</span> handleSubmit <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-en">useForm</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-createtask-tsx-LC8" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-createtask-tsx-LC9" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-s1">taskService</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-smi">TaskService</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-createtask-tsx-LC10" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-createtask-tsx-LC11" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-en">onSubmit</span> <span class="pl-c1">=</span> <span class="pl-kos">(</span><span class="pl-s1">data</span>: <span class="pl-smi">any</span><span class="pl-kos">,</span> <span class="pl-s1">e</span>: <span class="pl-smi">any</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-createtask-tsx-LC12" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">taskService</span><span class="pl-kos">.</span><span class="pl-en">createTask</span><span class="pl-kos">(</span><span class="pl-s1">data</span><span class="pl-kos">)</span><span class="pl-kos">.</span><span class="pl-en">then</span><span class="pl-kos">(</span><span class="pl-s1">response</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-createtask-tsx-LC13" class="blob-code blob-code-inner js-file-line">            <span class="pl-s1">props</span><span class="pl-kos">.</span><span class="pl-en">taskCreated</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-createtask-tsx-LC14" class="blob-code blob-code-inner js-file-line">            <span class="pl-s1">e</span><span class="pl-kos">.</span><span class="pl-c1">target</span><span class="pl-kos">.</span><span class="pl-en">reset</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-createtask-tsx-LC15" class="blob-code blob-code-inner js-file-line">        <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-createtask-tsx-LC16" class="blob-code blob-code-inner js-file-line">    <span class="pl-kos">}</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-createtask-tsx-LC17" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-createtask-tsx-LC18" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span><span class="pl-kos">(</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-createtask-tsx-LC19" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"container"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-createtask-tsx-LC20" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"row"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L21" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-createtask-tsx-LC21" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"col-md-12 mrgnbtm"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L22" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-createtask-tsx-LC22" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-ent">h2</span><span class="pl-c1">&gt;</span>ToDo List<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">h2</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L23" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="23"></td>
+          <td id="file-createtask-tsx-LC23" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-ent">form</span> <span class="pl-c1">onSubmit</span><span class="pl-c1">=</span><span class="pl-kos">{</span><span class="pl-en">handleSubmit</span><span class="pl-kos">(</span><span class="pl-s1">onSubmit</span><span class="pl-kos">)</span><span class="pl-kos">}</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L24" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="24"></td>
+          <td id="file-createtask-tsx-LC24" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"row mrgnbtm"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L25" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="25"></td>
+          <td id="file-createtask-tsx-LC25" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"form-group col-md-6"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L26" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="26"></td>
+          <td id="file-createtask-tsx-LC26" class="blob-code blob-code-inner js-file-line">                            <span class="pl-c1">&lt;</span><span class="pl-ent">label</span> <span class="pl-c1">htmlFor</span><span class="pl-c1">=</span><span class="pl-s">"exampleInputEmail1"</span><span class="pl-c1">&gt;</span>Task<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">label</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L27" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="27"></td>
+          <td id="file-createtask-tsx-LC27" class="blob-code blob-code-inner js-file-line">                            <span class="pl-c1">&lt;</span><span class="pl-ent">input</span> <span class="pl-kos">{</span>...<span class="pl-en">register</span><span class="pl-kos">(</span><span class="pl-s">"task"</span><span class="pl-kos">)</span><span class="pl-kos">}</span> <span class="pl-c1">placeholder</span><span class="pl-c1">=</span><span class="pl-s">"Create a Task"</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"form-control"</span> <span class="pl-c1">name</span><span class="pl-c1">=</span><span class="pl-s">"task"</span> <span class="pl-c1">id</span><span class="pl-c1">=</span><span class="pl-s">"task"</span> <span class="pl-c1">/</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L28" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="28"></td>
+          <td id="file-createtask-tsx-LC28" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L29" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="29"></td>
+          <td id="file-createtask-tsx-LC29" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"form-group col-md-6"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L30" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="30"></td>
+          <td id="file-createtask-tsx-LC30" class="blob-code blob-code-inner js-file-line">                            <span class="pl-c1">&lt;</span><span class="pl-ent">label</span> <span class="pl-c1">htmlFor</span><span class="pl-c1">=</span><span class="pl-s">"exampleInputPassword1"</span><span class="pl-c1">&gt;</span>Assignee<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">label</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L31" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="31"></td>
+          <td id="file-createtask-tsx-LC31" class="blob-code blob-code-inner js-file-line">                            <span class="pl-c1">&lt;</span><span class="pl-ent">input</span> <span class="pl-kos">{</span>...<span class="pl-en">register</span><span class="pl-kos">(</span><span class="pl-s">"assignee"</span><span class="pl-kos">)</span><span class="pl-kos">}</span> <span class="pl-c1">placeholder</span><span class="pl-c1">=</span><span class="pl-s">"Assignee"</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"form-control"</span> <span class="pl-c1">name</span><span class="pl-c1">=</span><span class="pl-s">"assignee"</span> <span class="pl-c1">id</span><span class="pl-c1">=</span><span class="pl-s">"assignee"</span> <span class="pl-c1">/</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L32" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="32"></td>
+          <td id="file-createtask-tsx-LC32" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L33" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="33"></td>
+          <td id="file-createtask-tsx-LC33" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L34" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="34"></td>
+          <td id="file-createtask-tsx-LC34" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"row mrgnbtm"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L35" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="35"></td>
+          <td id="file-createtask-tsx-LC35" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"form-group col-md-12"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L36" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="36"></td>
+          <td id="file-createtask-tsx-LC36" class="blob-code blob-code-inner js-file-line">                            <span class="pl-c1">&lt;</span><span class="pl-ent">label</span> <span class="pl-c1">htmlFor</span><span class="pl-c1">=</span><span class="pl-s">"exampleInputEmail1"</span><span class="pl-c1">&gt;</span>Status:<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">label</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L37" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="37"></td>
+          <td id="file-createtask-tsx-LC37" class="blob-code blob-code-inner js-file-line">                            <span class="pl-c1">&lt;</span><span class="pl-ent">select</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"form-control"</span> <span class="pl-kos">{</span>...<span class="pl-en">register</span><span class="pl-kos">(</span><span class="pl-s">"status"</span><span class="pl-kos">)</span><span class="pl-kos">}</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L38" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="38"></td>
+          <td id="file-createtask-tsx-LC38" class="blob-code blob-code-inner js-file-line">                                <span class="pl-c1">&lt;</span><span class="pl-ent">option</span><span class="pl-c1">&gt;</span>To Be Done<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">option</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L39" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="39"></td>
+          <td id="file-createtask-tsx-LC39" class="blob-code blob-code-inner js-file-line">                                <span class="pl-c1">&lt;</span><span class="pl-ent">option</span><span class="pl-c1">&gt;</span>In Progress<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">option</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L40" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="40"></td>
+          <td id="file-createtask-tsx-LC40" class="blob-code blob-code-inner js-file-line">                                <span class="pl-c1">&lt;</span><span class="pl-ent">option</span><span class="pl-c1">&gt;</span>Completed<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">option</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L41" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="41"></td>
+          <td id="file-createtask-tsx-LC41" class="blob-code blob-code-inner js-file-line">                            <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">select</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L42" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="42"></td>
+          <td id="file-createtask-tsx-LC42" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L43" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="43"></td>
+          <td id="file-createtask-tsx-LC43" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L44" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="44"></td>
+          <td id="file-createtask-tsx-LC44" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-ent">input</span> <span class="pl-c1">type</span><span class="pl-c1">=</span><span class="pl-s">"submit"</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"btn btn-danger mrgnbtm"</span> <span class="pl-c1">/</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L45" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="45"></td>
+          <td id="file-createtask-tsx-LC45" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">form</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L46" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="46"></td>
+          <td id="file-createtask-tsx-LC46" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L47" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="47"></td>
+          <td id="file-createtask-tsx-LC47" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L48" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="48"></td>
+          <td id="file-createtask-tsx-LC48" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L49" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="49"></td>
+          <td id="file-createtask-tsx-LC49" class="blob-code blob-code-inner js-file-line">    <span class="pl-kos">)</span></td>
+        </tr>
+        <tr>
+          <td id="file-createtask-tsx-L50" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="50"></td>
+          <td id="file-createtask-tsx-LC50" class="blob-code blob-code-inner js-file-line"><span class="pl-kos">}</span></td>
+        </tr>
+  </tbody></table>
+</div>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/bbachi/188312c4e93b5df884d8c2d90773f0e2/raw/ecd312a2524b228c48dc023b8919f160b95d5d16/CreateTask.tsx" style="float:right">view raw</a>
+        <a href="https://gist.github.com/bbachi/188312c4e93b5df884d8c2d90773f0e2#file-createtask-tsx">
+          CreateTask.tsx
+        </a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+    <div class="gist-file" translate="no">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-tasks-tsx" class="file my-2">
+    
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-tsx  ">
+
+      
+<div class="js-check-bidi js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template"></template>
+<template class="js-line-alert-template"></template>
+
+  <table class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="TSX" data-tagsearch-path="Tasks.tsx">
+        <tbody><tr>
+          <td id="file-tasks-tsx-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-tasks-tsx-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-smi">React</span> <span class="pl-k">from</span> <span class="pl-s">'react'</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-tasks-tsx-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-smi">EditTaskModal</span> <span class="pl-k">from</span> <span class="pl-s">'./EditTaskModal'</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-tasks-tsx-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-tasks-tsx-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">interface</span> <span class="pl-smi">ITasks</span> <span class="pl-kos">{</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-tasks-tsx-LC5" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">tasks</span>: <span class="pl-smi">any</span><span class="pl-kos">[</span><span class="pl-kos">]</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-tasks-tsx-LC6" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">deleteTask</span>: <span class="pl-smi">Function</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-tasks-tsx-LC7" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">taskEdited</span>: <span class="pl-smi">Function</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-tasks-tsx-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-kos">}</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-tasks-tsx-LC9" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-tasks-tsx-LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-k">const</span> <span class="pl-smi">Tasks</span> <span class="pl-c1">=</span> <span class="pl-kos">(</span><span class="pl-kos">{</span>tasks<span class="pl-kos">,</span> deleteTask<span class="pl-kos">,</span> taskEdited<span class="pl-kos">}</span>: <span class="pl-smi">ITasks</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-tasks-tsx-LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-tasks-tsx-LC12" class="blob-code blob-code-inner js-file-line">    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'tasks length:::'</span><span class="pl-kos">,</span> <span class="pl-s1">tasks</span><span class="pl-kos">)</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-tasks-tsx-LC13" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">tasks</span><span class="pl-kos">.</span><span class="pl-c1">length</span> <span class="pl-c1">===</span> <span class="pl-c1">0</span><span class="pl-kos">)</span> <span class="pl-k">return</span> <span class="pl-c1">null</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-tasks-tsx-LC14" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-tasks-tsx-LC15" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-smi">TaskRow</span> <span class="pl-c1">=</span> <span class="pl-kos">(</span><span class="pl-s1">task</span>: <span class="pl-smi">any</span><span class="pl-kos">,</span> <span class="pl-s1">index</span>: <span class="pl-smi">number</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-tasks-tsx-LC16" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-tasks-tsx-LC17" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span><span class="pl-kos">(</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-tasks-tsx-LC18" class="blob-code blob-code-inner js-file-line">              <span class="pl-c1">&lt;</span><span class="pl-ent">tr</span> <span class="pl-c1">key</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span><span class="pl-s1">index</span><span class="pl-kos">}</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-kos">{</span><span class="pl-s1">index</span><span class="pl-c1">%</span><span class="pl-c1">2</span> <span class="pl-c1">===</span> <span class="pl-c1">0</span>?<span class="pl-s">'odd'</span>:<span class="pl-s">'even'</span><span class="pl-kos">}</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-tasks-tsx-LC19" class="blob-code blob-code-inner js-file-line">                  <span class="pl-c1">&lt;</span><span class="pl-ent">td</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-s1">task</span><span class="pl-kos">.</span><span class="pl-c1">_id</span><span class="pl-kos">}</span><span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">td</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-tasks-tsx-LC20" class="blob-code blob-code-inner js-file-line">                  <span class="pl-c1">&lt;</span><span class="pl-ent">td</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-s1">task</span><span class="pl-kos">.</span><span class="pl-c1">task</span><span class="pl-kos">}</span><span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">td</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L21" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-tasks-tsx-LC21" class="blob-code blob-code-inner js-file-line">                  <span class="pl-c1">&lt;</span><span class="pl-ent">td</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-s1">task</span><span class="pl-kos">.</span><span class="pl-c1">assignee</span><span class="pl-kos">}</span><span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">td</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L22" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-tasks-tsx-LC22" class="blob-code blob-code-inner js-file-line">                  <span class="pl-c1">&lt;</span><span class="pl-ent">td</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L23" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="23"></td>
+          <td id="file-tasks-tsx-LC23" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"row"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L24" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="24"></td>
+          <td id="file-tasks-tsx-LC24" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"col-md-6"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L25" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="25"></td>
+          <td id="file-tasks-tsx-LC25" class="blob-code blob-code-inner js-file-line">                        <span class="pl-kos">{</span><span class="pl-s1">task</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">}</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L26" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="26"></td>
+          <td id="file-tasks-tsx-LC26" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L27" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="27"></td>
+          <td id="file-tasks-tsx-LC27" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"col-md-3"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L28" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="28"></td>
+          <td id="file-tasks-tsx-LC28" class="blob-code blob-code-inner js-file-line">                            <span class="pl-c1">&lt;</span><span class="pl-smi">EditTaskModal</span> <span class="pl-c1">task</span><span class="pl-c1">=</span><span class="pl-kos">{</span><span class="pl-s1">task</span><span class="pl-kos">}</span> <span class="pl-c1">taskEdited</span><span class="pl-c1">=</span><span class="pl-kos">{</span><span class="pl-s1">taskEdited</span><span class="pl-kos">}</span><span class="pl-c1">/</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L29" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="29"></td>
+          <td id="file-tasks-tsx-LC29" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L30" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="30"></td>
+          <td id="file-tasks-tsx-LC30" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"col-md-3"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L31" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="31"></td>
+          <td id="file-tasks-tsx-LC31" class="blob-code blob-code-inner js-file-line">                          <span class="pl-c1">&lt;</span><span class="pl-ent">button</span> <span class="pl-c1">type</span><span class="pl-c1">=</span><span class="pl-s">"button"</span> <span class="pl-c1">onClick</span><span class="pl-c1">=</span><span class="pl-kos">{</span><span class="pl-kos">(</span><span class="pl-s1">e</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-en">deleteTask</span><span class="pl-kos">(</span><span class="pl-s1">task</span><span class="pl-kos">.</span><span class="pl-c1">_id</span><span class="pl-kos">)</span><span class="pl-kos">}</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"btn btn-danger right"</span><span class="pl-c1">&gt;</span>Delete<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">button</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L32" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="32"></td>
+          <td id="file-tasks-tsx-LC32" class="blob-code blob-code-inner js-file-line">                        <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L33" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="33"></td>
+          <td id="file-tasks-tsx-LC33" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L34" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="34"></td>
+          <td id="file-tasks-tsx-LC34" class="blob-code blob-code-inner js-file-line">                  <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">td</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L35" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="35"></td>
+          <td id="file-tasks-tsx-LC35" class="blob-code blob-code-inner js-file-line">              <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">tr</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L36" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="36"></td>
+          <td id="file-tasks-tsx-LC36" class="blob-code blob-code-inner js-file-line">          <span class="pl-kos">)</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L37" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="37"></td>
+          <td id="file-tasks-tsx-LC37" class="blob-code blob-code-inner js-file-line">    <span class="pl-kos">}</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L38" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="38"></td>
+          <td id="file-tasks-tsx-LC38" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L39" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="39"></td>
+          <td id="file-tasks-tsx-LC39" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-s1">taskTable</span> <span class="pl-c1">=</span> <span class="pl-s1">tasks</span><span class="pl-kos">.</span><span class="pl-en">map</span><span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-s1">task</span><span class="pl-kos">,</span><span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-smi">TaskRow</span><span class="pl-kos">(</span><span class="pl-s1">task</span><span class="pl-kos">,</span><span class="pl-s1">index</span><span class="pl-kos">)</span><span class="pl-kos">)</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L40" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="40"></td>
+          <td id="file-tasks-tsx-LC40" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L41" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="41"></td>
+          <td id="file-tasks-tsx-LC41" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span><span class="pl-kos">(</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L42" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="42"></td>
+          <td id="file-tasks-tsx-LC42" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"container"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L43" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="43"></td>
+          <td id="file-tasks-tsx-LC43" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">&lt;</span><span class="pl-ent">h2</span><span class="pl-c1">&gt;</span>Tasks<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">h2</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L44" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="44"></td>
+          <td id="file-tasks-tsx-LC44" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">&lt;</span><span class="pl-ent">table</span> <span class="pl-c1">className</span><span class="pl-c1">=</span><span class="pl-s">"table table-bordered"</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L45" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="45"></td>
+          <td id="file-tasks-tsx-LC45" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-ent">thead</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L46" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="46"></td>
+          <td id="file-tasks-tsx-LC46" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-ent">tr</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L47" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="47"></td>
+          <td id="file-tasks-tsx-LC47" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-ent">th</span><span class="pl-c1">&gt;</span>Task Id<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">th</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L48" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="48"></td>
+          <td id="file-tasks-tsx-LC48" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-ent">th</span><span class="pl-c1">&gt;</span>Task Name<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">th</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L49" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="49"></td>
+          <td id="file-tasks-tsx-LC49" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-ent">th</span><span class="pl-c1">&gt;</span>Assignee<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">th</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L50" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="50"></td>
+          <td id="file-tasks-tsx-LC50" class="blob-code blob-code-inner js-file-line">                    <span class="pl-c1">&lt;</span><span class="pl-ent">th</span><span class="pl-c1">&gt;</span>Status<span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">th</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L51" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="51"></td>
+          <td id="file-tasks-tsx-LC51" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">tr</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L52" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="52"></td>
+          <td id="file-tasks-tsx-LC52" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">thead</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L53" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="53"></td>
+          <td id="file-tasks-tsx-LC53" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-ent">tbody</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L54" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="54"></td>
+          <td id="file-tasks-tsx-LC54" class="blob-code blob-code-inner js-file-line">                    <span class="pl-kos">{</span><span class="pl-s1">taskTable</span><span class="pl-kos">}</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L55" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="55"></td>
+          <td id="file-tasks-tsx-LC55" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">tbody</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L56" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="56"></td>
+          <td id="file-tasks-tsx-LC56" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">table</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L57" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="57"></td>
+          <td id="file-tasks-tsx-LC57" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">&lt;</span><span class="pl-c1">/</span><span class="pl-ent">div</span><span class="pl-c1">&gt;</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L58" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="58"></td>
+          <td id="file-tasks-tsx-LC58" class="blob-code blob-code-inner js-file-line">    <span class="pl-kos">)</span></td>
+        </tr>
+        <tr>
+          <td id="file-tasks-tsx-L59" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="59"></td>
+          <td id="file-tasks-tsx-LC59" class="blob-code blob-code-inner js-file-line"><span class="pl-kos">}</span></td>
+        </tr>
+  </tbody></table>
+</div>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/bbachi/188312c4e93b5df884d8c2d90773f0e2/raw/ecd312a2524b228c48dc023b8919f160b95d5d16/Tasks.tsx" style="float:right">view raw</a>
+        <a href="https://gist.github.com/bbachi/188312c4e93b5df884d8c2d90773f0e2#file-tasks-tsx">
+          Tasks.tsx
+        </a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script><script defer="" src="./v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon="{&quot;rayId&quot;:&quot;6fe0f47d3d173977&quot;,&quot;token&quot;:&quot;0b5f665943484354a59c39c6833f7078&quot;,&quot;version&quot;:&quot;2021.12.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

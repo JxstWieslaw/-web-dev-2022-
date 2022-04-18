@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/3501a050b7bf599439b6999f4e799851 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>MEAN – Medium</title><meta name="description" content="Instantly share code, notes, and snippets. You can&#39;t perform that action at this time. You signed in with another tab or window. You signed out in another tab or window. Reload to refresh your session. Reload to refresh your session."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body data-new-gr-c-s-loaded="14.1057.0"><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./457554b1d7543ed31eca3507ea79761b.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-4dbc2a517d84.css"><div id="gist114707072" class="gist">
+    <div class="gist-file" translate="no">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-index-ts" class="file my-2">
+    
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-typescript  ">
+
+      
+<div class="js-check-bidi js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template"></template>
+<template class="js-line-alert-template"></template>
+
+  <table class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="TypeScript" data-tagsearch-path="index.ts">
+        <tbody><tr>
+          <td id="file-index-ts-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-index-ts-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-c1">*</span> <span class="pl-k">as</span> <span class="pl-s1">http</span> <span class="pl-k">from</span> <span class="pl-s">"http"</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-index-ts-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-smi">App</span> <span class="pl-k">from</span> <span class="pl-s">"./app"</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-index-ts-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-smi">APILogger</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">"./logger/api.logger"</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-index-ts-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'dotenv'</span><span class="pl-kos">)</span><span class="pl-kos">.</span><span class="pl-en">config</span><span class="pl-kos">(</span><span class="pl-kos">)</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-index-ts-LC5" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-index-ts-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-s1">port</span> <span class="pl-c1">=</span> <span class="pl-s1">process</span><span class="pl-kos">.</span><span class="pl-c1">env</span><span class="pl-kos">.</span><span class="pl-c1">PORT</span> <span class="pl-c1">||</span> <span class="pl-c1">3080</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-index-ts-LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-index-ts-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">App</span><span class="pl-kos">.</span><span class="pl-en">set</span><span class="pl-kos">(</span><span class="pl-s">"port"</span><span class="pl-kos">,</span> <span class="pl-s1">port</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-index-ts-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-s1">server</span> <span class="pl-c1">=</span> <span class="pl-s1">http</span><span class="pl-kos">.</span><span class="pl-en">createServer</span><span class="pl-kos">(</span><span class="pl-smi">App</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-index-ts-LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">server</span><span class="pl-kos">.</span><span class="pl-en">listen</span><span class="pl-kos">(</span><span class="pl-s1">port</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-index-ts-LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-index-ts-LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-s1">logger</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-smi">APILogger</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-index-ts-LC13" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-index-ts-LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">server</span><span class="pl-kos">.</span><span class="pl-en">on</span><span class="pl-kos">(</span><span class="pl-s">"listening"</span><span class="pl-kos">,</span> <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span>: <span class="pl-smi"><span class="pl-k">void</span></span> <span class="pl-kos">{</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-index-ts-LC15" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-s1">addr</span> <span class="pl-c1">=</span> <span class="pl-s1">server</span><span class="pl-kos">.</span><span class="pl-en">address</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-index-ts-LC16" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-s1">bind</span> <span class="pl-c1">=</span> <span class="pl-kos">(</span><span class="pl-k">typeof</span> <span class="pl-s1">addr</span> <span class="pl-c1">===</span> <span class="pl-s">"string"</span><span class="pl-kos">)</span> ? <span class="pl-s">`pipe <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">addr</span><span class="pl-kos">}</span></span>`</span> : <span class="pl-s">`port <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">addr</span><span class="pl-kos">.</span><span class="pl-c1">port</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-index-ts-LC17" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">logger</span><span class="pl-kos">.</span><span class="pl-en">info</span><span class="pl-kos">(</span><span class="pl-s">`Listening on <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">bind</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">,</span> <span class="pl-c1">null</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-index-ts-LC18" class="blob-code blob-code-inner js-file-line"> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-index-ts-LC19" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-index-ts-L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-index-ts-LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">module</span><span class="pl-kos">.</span><span class="pl-c1">exports</span> <span class="pl-c1">=</span> <span class="pl-smi">App</span><span class="pl-kos">;</span></td>
+        </tr>
+  </tbody></table>
+</div>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/bbachi/457554b1d7543ed31eca3507ea79761b/raw/9f58126f75204760ddf29fa6d87a6ad8c64bc05f/index.ts" style="float:right">view raw</a>
+        <a href="https://gist.github.com/bbachi/457554b1d7543ed31eca3507ea79761b#file-index-ts">
+          index.ts
+        </a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script><script defer="" src="./v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon="{&quot;rayId&quot;:&quot;6fe0f36c4fe63977&quot;,&quot;token&quot;:&quot;0b5f665943484354a59c39c6833f7078&quot;,&quot;version&quot;:&quot;2021.12.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
