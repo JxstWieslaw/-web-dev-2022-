@@ -191,7 +191,7 @@ console.log(scene);
 
 // Model swatches
 const model_swatches = document.querySelectorAll(".objects__swatch");
-// console.log(model_swatches)
+console.log(model_swatches)
 
 for (const swatch of model_swatches) {
   swatch.addEventListener("click", selectModelSwatches);
