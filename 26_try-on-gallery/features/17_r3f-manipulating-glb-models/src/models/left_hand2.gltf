@@ -1,0 +1,154 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "babylon.js glTF exporter for Autodesk MAYA 2022 v20220322.1"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "group"
+    },
+    {
+      "children": [
+        2
+      ],
+      "translation": [
+        3.81469718e-8,
+        -0.237075225,
+        0
+      ],
+      "name": "pasted__group8"
+    },
+    {
+      "children": [
+        3
+      ],
+      "translation": [
+        -3.81469718e-8,
+        0.237075225,
+        0
+      ],
+      "name": "pasted__Body"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "polySurface2"
+    },
+    {
+      "mesh": 0,
+      "name": "polySurface3"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0
+        }
+      ],
+      "name": "polySurface3"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5123,
+      "count": 54906,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 9668,
+      "max": [
+        -0.125135213,
+        1.17377353,
+        0.119371295
+      ],
+      "min": [
+        -0.517065346,
+        0.799874246,
+        -0.0598735362
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 116016,
+      "componentType": 5126,
+      "count": 9668,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 9668,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 109812,
+      "name": "bufferViewScalar",
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 109812,
+      "byteLength": 232032,
+      "byteStride": 12,
+      "name": "bufferViewFloatVec3"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 341844,
+      "byteLength": 77344,
+      "byteStride": 8,
+      "name": "bufferViewFloatVec2"
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "left_hand2_data.bin",
+      "byteLength": 419188
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.450053632
+      },
+      "name": "pasted__lambert11"
+    }
+  ]
+}

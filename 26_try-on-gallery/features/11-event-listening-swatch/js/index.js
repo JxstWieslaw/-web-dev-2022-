@@ -174,8 +174,9 @@ function selectColorSwatch(e) {
       color: parseInt("0x" + color.color),
       shininess: color.shininess ? color.shininess : 10,
     });
+    console.log(new_mtl.color)
   }
-
+  
   setMaterial(activeOption, new_mtl);
 }
 
@@ -268,6 +269,7 @@ function addBody() {
   appliedBody.name = "body";
   scene.add(appliedBody);
 }
+console.log(appliedRightHand)
 
 /**********************************************************************************************/
 
