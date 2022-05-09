@@ -7,10 +7,16 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/body1.glb')
+  const { nodes, materials } = useGLTF('/body2.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh geometry={nodes.pCube1.geometry} material={nodes.pCube1.material} position={[-1.05, 5.83, -0.63]} />
+      <group position={[0, -0.24, 0]}>
+        <group position={[0, 0.24, 0]}>
+          <mesh geometry={nodes.polySurface8.geometry} material={materials.pasted__lambert11} />
+        </group>
+      </group>
     </group>
   )
 }
+
+useGLTF.preload('/body2.glb')
