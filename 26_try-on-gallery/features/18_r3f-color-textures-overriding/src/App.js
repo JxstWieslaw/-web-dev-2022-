@@ -13,10 +13,10 @@ import { Body } from "./components/objects/Body/Body";
 import { Option } from "./components/options/ActiveOption";
 import { Color } from "./components/colors/Color";
 
-// function Foo() {
-//   const { scene } = useThree();
-//   console.log(scene.children);
-// }
+function Foo() {
+  const { scene } = useThree();
+  console.log(scene.children);
+}
 
 //Model 1 Objects
 function Body1Model({ ...props }) {
@@ -37,7 +37,22 @@ function Body1Model({ ...props }) {
         material={nodes.pCube1.material}
         position={[-1.05, 5.83, -0.63]}
         material-color={props.color}
-      />
+      >
+        {props.texture !== null && (
+          <meshPhongMaterial
+            attachArray="material"
+            map={props.texture.map}
+            shininess={props.texture.shininess}
+          />
+        )}
+        {props.color != null && (
+          <meshPhongMaterial
+            attachArray="material"
+            color={props.color.color}
+            shininess={props.color.shininess}
+          />
+        )}
+      </mesh>
     </group>
   );
 }
@@ -59,7 +74,22 @@ function LeftHand1Model({ ...props }) {
         geometry={nodes.polySurface1.geometry}
         material={nodes.polySurface1.material}
         material-color={props.color}
-      />
+      >
+        {props.texture !== null && (
+          <meshPhongMaterial
+            attachArray="material"
+            map={props.texture.map}
+            shininess={props.texture.shininess}
+          />
+        )}
+        {props.color != null && (
+          <meshPhongMaterial
+            attachArray="material"
+            color={props.color.color}
+            shininess={props.color.shininess}
+          />
+        )}
+      </mesh>
     </group>
   );
 }
@@ -81,7 +111,22 @@ function RightHand1Model({ ...props }) {
         geometry={nodes.polySurface2.geometry}
         material={nodes.polySurface2.material}
         material-color={props.color}
-      />
+      >
+        {props.texture !== null && (
+          <meshPhongMaterial
+            attachArray="material"
+            map={props.texture.map}
+            shininess={props.texture.shininess}
+          />
+        )}
+        {props.color != null && (
+          <meshPhongMaterial
+            attachArray="material"
+            color={props.color.color}
+            shininess={props.color.shininess}
+          />
+        )}
+      </mesh>
     </group>
   );
 }
@@ -92,166 +137,7 @@ function LeftHand2Model({ ...props }) {
 
   //put the textures and colors into one object
   //full implementation will consist of an exact replica of the logic in the Vanilla App
-  const colorTextures = [
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/wood_.jpg?v=1649144910756",
-      size: [2, 2, 2],
-      shininess: 60,
-    },
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/fabric_.jpg?v=1649144905001",
-      size: [4, 4, 4],
-      shininess: 0,
-    },
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/pattern_.jpg?v=1649144906757",
-      size: [8, 8, 8],
-      shininess: 10,
-    },
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/denim_.jpg?v=1649144904412",
-      size: [3, 3, 3],
-      shininess: 0,
-    },
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/quilt_.jpg?v=1649144908805",
-      size: [6, 6, 6],
-      shininess: 0,
-    },
-    {
-      color: "131417",
-    },
-    {
-      color: "374047",
-    },
-    {
-      color: "5f6e78",
-    },
-    {
-      color: "7f8a93",
-    }
-  ];
-    const colors = [
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/wood_.jpg?v=1649144910756",
-      color: null,
-    },
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/fabric_.jpg?v=1649144905001",
-      color: null,
-    },
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/pattern_.jpg?v=1649144906757",
-      color: null,
-    },
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/denim_.jpg?v=1649144904412",
-      color: null,
-    },
-    {
-      texture:
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/quilt_.jpg?v=1649144908805",
-      color: null,
-    },
-    {
-      color: "#131417",
-      texture: null,
-    },
-    {
-      color: "#374047",
-      texture: null,
-    },
-    {
-      color: "#5f6e78",
-      texture: null,
-    },
-    {
-      color: "#7f8a93",
-      texture: null,
-    },
-  ];
 
-  const textures = [
-    {
-      texture: useLoader(
-        TextureLoader,
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/wood_.jpg?v=1649144910756"
-      ),
-      size: [2, 2, 2],
-      shininess: 60,
-    },
-    {
-      texture: useLoader(
-        TextureLoader,
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/fabric_.jpg?v=1649144905001"
-      ),
-      size: [4, 4, 4],
-      shininess: 0,
-    },
-    {
-      texture: useLoader(
-        TextureLoader,
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/pattern_.jpg?v=1649144906757"
-      ),
-      size: [8, 8, 8],
-      shininess: 10,
-    },
-    {
-      texture: useLoader(
-        TextureLoader,
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/denim_.jpg?v=1649144904412"
-      ),
-      size: [3, 3, 3],
-      shininess: 0,
-    },
-    {
-      texture: useLoader(
-        TextureLoader,
-        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/quilt_.jpg?v=1649144908805"
-      ),
-      size: [6, 6, 6],
-      shininess: 0,
-    },
-  ];
-
-  //currentTexture Object : map and shininess
-
-  //currentColor Object : color and shininess
-  let new_mtl;
-  if (props.texture) {
-    let cur = textures[props.texture].texture;
-    cur.repeat.set(
-      textures[props.texture].size[0],
-      textures[props.texture].size[1],
-      textures[props.texture].size[2]
-    );
-    cur.wrapS = THREE.RepeatWrapping;
-    cur.wrapT = THREE.RepeatWrapping;
-    new_mtl = {
-      map: cur,
-      shininess: textures[props.texture].shininess
-        ? textures[props.texture].shininess
-        : 10,
-    };
-  }
-   if(props.color){
-    new_mtl={
-      color: (colors[props.color].color),
-      shininess: colors.shininess ? colors.shininess : 10,
-    };
-    console.log(new_mtl.color)
-  }
-
-  
   const group = useRef();
   const name = "LH2";
   const { nodes, materials } = useGLTF("/left_hand2.glb");
@@ -271,20 +157,20 @@ function LeftHand2Model({ ...props }) {
             material={materials.pasted__lambert11}
             // material-color={props.color && colors[props.color].color}
           >
-            {props.texture && (
+            {props.texture !== null && (
               <meshPhongMaterial
                 attachArray="material"
-                map={new_mtl.map}
-                shininess={new_mtl.shininess}
+                map={props.texture.map}
+                shininess={props.texture.shininess}
               />
             )}
-            {/* {props.color && (
+            {props.color != null && (
               <meshPhongMaterial
-              attachArray="material"
-              color={new_mtl.color}
-              shininess={new_mtl.shininess}
-            />
-            )} */}
+                attachArray="material"
+                color={props.color.color}
+                shininess={props.color.shininess}
+              />
+            )}
           </mesh>
         </group>
       </group>
@@ -311,7 +197,22 @@ function RightHand2Model({ ...props }) {
             geometry={nodes.polySurface1.geometry}
             material={materials.pasted__lambert11}
             material-color={props.color}
-          />
+          >
+            {props.texture !== null && (
+              <meshPhongMaterial
+                attachArray="material"
+                map={props.texture.map}
+                shininess={props.texture.shininess}
+              />
+            )}
+            {props.color != null && (
+              <meshPhongMaterial
+                attachArray="material"
+                color={props.color.color}
+                shininess={props.color.shininess}
+              />
+            )}
+          </mesh>
         </group>
       </group>
     </group>
@@ -337,7 +238,22 @@ function Body2Model({ ...props }) {
             geometry={nodes.polySurface8.geometry}
             material={materials.pasted__lambert11}
             material-color={props.color}
-          />
+          >
+            {props.texture !== null && (
+              <meshPhongMaterial
+                attachArray="material"
+                map={props.texture.map}
+                shininess={props.texture.shininess}
+              />
+            )}
+            {props.color != null && (
+              <meshPhongMaterial
+                attachArray="material"
+                color={props.color.color}
+                shininess={props.color.shininess}
+              />
+            )}
+          </mesh>
         </group>
       </group>
     </group>
@@ -351,18 +267,19 @@ function App() {
   const [appliedRightHand, setAppliedRightHand] = useState("RH2");
   const [appliedLeftHand, setAppliedLeftHand] = useState("LH2");
   const [appliedBody, setAppliedBody] = useState("B2");
-  const [colorRH1, setColorRH1] = useState();
-  const [colorLH1, setColorLH1] = useState();
-  const [colorB1, setColorB1] = useState();
-  const [colorRH2, setColorRH2] = useState();
-  const [colorLH2, setColorLH2] = useState();
-  const [colorB2, setColorB2] = useState();
-  const [textureLH2, setTextureLH2] = useState();
-  // const [textureLH1, setTextureLH1] = useState();
-  // const [textureRH2, setTextureRH2] = useState();
-  // const [textureRH1, setTextureRH1] = useState();
-  // const [textureB2, setTextureB2] = useState();
-  // const [textureB1, setTextureB1] = useState();
+  const [colorLH2, setColorLH2] = useState(null);
+  const [textureLH2, setTextureLH2] = useState(null);
+  const [colorRH2, setColorRH2] = useState(null);
+  const [textureRH2, setTextureRH2] = useState(null);
+  const [colorB2, setColorB2] = useState(null);
+  const [textureB2, setTextureB2] = useState(null);
+
+  const [colorRH1, setColorRH1] = useState(null);
+  const [textureRH1, setTextureRH1] = useState(null);
+  const [colorLH1, setColorLH1] = useState(null);
+  const [textureLH1, setTextureLH1] = useState(null);
+  const [colorB1, setColorB1] = useState(null);
+  const [textureB1, setTextureB1] = useState(null);
 
   const leftHand_Objects = [
     {
@@ -475,6 +392,133 @@ function App() {
     },
   ];
 
+  const colorChange = [
+    {
+      texture: useLoader(
+        TextureLoader,
+        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/wood_.jpg?v=1649144910756"
+      ),
+      size: [2, 2, 2],
+      shininess: 60,
+    },
+    {
+      texture: useLoader(
+        TextureLoader,
+        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/fabric_.jpg?v=1649144905001"
+      ),
+      size: [4, 4, 4],
+      shininess: 0,
+    },
+    {
+      texture: useLoader(
+        TextureLoader,
+        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/pattern_.jpg?v=1649144906757"
+      ),
+      size: [8, 8, 8],
+      shininess: 10,
+    },
+    {
+      texture: useLoader(
+        TextureLoader,
+        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/denim_.jpg?v=1649144904412"
+      ),
+      size: [3, 3, 3],
+      shininess: 0,
+    },
+    {
+      texture: useLoader(
+        TextureLoader,
+        "https://cdn.glitch.global/277c2806-8417-4701-8cfc-c96cad172230/quilt_.jpg?v=1649144908805"
+      ),
+      size: [6, 6, 6],
+      shininess: 0,
+    },
+    {
+      color: "#131417",
+    },
+    {
+      color: "#374047",
+    },
+    {
+      color: "#5f6e78",
+    },
+    {
+      color: "#7f8a93",
+    },
+  ];
+
+  function handleColorChange(index) {
+    let color = colorChange[index];
+    let new_mtl;
+
+    if (color.texture) {
+      let cur = color.texture;
+      cur.repeat.set(color.size[0], color.size[1], color.size[2]);
+      cur.wrapS = THREE.RepeatWrapping;
+      cur.wrapT = THREE.RepeatWrapping;
+      new_mtl = {
+        map: cur,
+        shininess: color.shininess ? color.shininess : 10,
+      };
+      if (activeOption === 0) {
+        if (appliedRightHand === "RH2") {
+          setTextureRH2(new_mtl);
+          setColorRH2(null);
+        } else if (appliedRightHand === "RH1") {
+          setTextureRH1(new_mtl);
+          setColorRH1(null);
+        }
+      } else if (activeOption === 1) {
+        if (appliedLeftHand === "LH2") {
+          setTextureLH2(new_mtl);
+          setColorLH2(null);
+        } else if (appliedLeftHand === "LH1") {
+          setTextureLH1(new_mtl);
+          setColorLH1(null);
+        }
+      } else if (activeOption === 2) {
+        if (appliedBody === "B2") {
+          setTextureB2(new_mtl);
+          setColorB2(null);
+        } else if (appliedBody === "B1") {
+          setTextureB1(new_mtl);
+          setColorB1(null);
+        }
+      }
+    } else {
+      new_mtl = {
+        color: color.color,
+        shininess: color.shininess ? color.shininess : 10,
+      };
+      if (activeOption === 0) {
+        if (appliedRightHand === "RH2") {
+          setColorRH2(new_mtl);
+          setTextureRH2(null);
+        } else if (appliedRightHand === "RH1") {
+          setColorRH1(new_mtl);
+          setTextureRH1(null);
+        }
+      } else if (activeOption === 1) {
+        if (appliedLeftHand === "LH2") {
+          setColorLH2(new_mtl);
+          setTextureLH2(null);
+        } else if (appliedLeftHand === "LH1") {
+          setColorLH1(new_mtl);
+          setTextureLH1(null);
+        }
+      } else if (activeOption === 2) {
+        if (appliedBody === "B2") {
+          setColorB2(new_mtl);
+          setTextureB2(null);
+        } else if (appliedBody === "B1") {
+          setColorB1(new_mtl);
+          setTextureB1(null);
+        }
+      }
+    }
+    console.log(new_mtl);
+  }
+
   const colorMap = function DoSomething() {
     console.log("clicked");
   };
@@ -532,31 +576,31 @@ function App() {
 
       {/* The Canvas element is used to draw the 3D scene  */}
       <div className="product-canvas">
-        <Canvas linear>
+        <Canvas linear flat>
           <Suspense fallback={null}>
-            {/* <Foo /> */}
+            <Foo />
             <ambientLight />
             <spotLight
-              intensity={2}
+              intensity={0.9}
               angle={0.1}
               penumbra={1}
               position={[10, 15, 10]}
               castShadow
             />
             {appliedRightHand === "RH2" ? (
-              <RightHand2Model color={colorRH2} />
+              <RightHand2Model texture={textureRH2} color={colorRH2} />
             ) : (
-              <RightHand1Model color={colorRH1} />
+              <RightHand1Model texture={textureRH1} color={colorRH1} />
             )}
             {appliedLeftHand === "LH2" ? (
               <LeftHand2Model texture={textureLH2} color={colorLH2} />
             ) : (
-              <LeftHand1Model color={colorLH1} />
+              <LeftHand1Model texture={textureLH1} color={colorLH1} />
             )}
             {appliedBody === "B2" ? (
-              <Body2Model color={colorB2} />
+              <Body2Model texture={textureB2} color={colorB2} />
             ) : (
-              <Body1Model color={colorB1} />
+              <Body1Model texture={textureB1} color={colorB1} />
             )}
 
             <OrbitControls
@@ -576,10 +620,7 @@ function App() {
               <Color
                 key={index}
                 background={colorOrTexture}
-                onClick={() => {
-                  if (colorOrTexture.texture) setTextureLH2(index);
-                  else setColorLH2(index);
-                }}
+                onClick={() => handleColorChange(index)}
               />
             ))}
           </div>
