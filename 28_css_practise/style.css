@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+  border: 3px solid hsl(187, 44%, 58%);
+  border-radius: 10%;
+  background: rgb(222, 232, 235);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  height: 300px;
+  width: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content:space-betweeen;
+  
+}
