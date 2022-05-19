@@ -7,6 +7,8 @@ import Register from "./screens/Register.jsx";
 import Activate from "./screens/Activate.jsx";
 import Private from "./screens/Private.jsx";
 import Admin from "./screens/Admin.jsx";
+import Configurator from "./components-configurator/home/Home";
+import LandingPage from "./screens/LandingPage.jsx";
 import ForgetPassword from "./screens/ForgetPassword.jsx";
 import ResetPassword from "./screens/ResetPassword.jsx";
 
@@ -18,7 +20,8 @@ const Combined = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact render={(props) => <App {...props} />} />
+        <Route path="/" exact render={(props) => <LandingPage {...props} />} />
+        <Route path="/features" exact render={(props) => <App {...props} />} />
         <Route path="/login" exact render={(props) => <Login {...props} />} />
         <Route
           path="/register"
@@ -39,6 +42,11 @@ const Combined = () => {
           path="/users/activate/:token"
           exact
           render={(props) => <Activate {...props} />}
+        />
+        <Route
+          path="/configurator"
+          exact
+          render={(props) => <Configurator {...props} />}
         />
         <PrivateRoute path="/private" exact component={Private} />
         <AdminRoute path="/admin" exact component={Admin} />

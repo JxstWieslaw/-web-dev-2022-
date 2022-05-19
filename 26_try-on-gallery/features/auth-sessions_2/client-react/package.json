@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "@react-oauth/google": "^0.2.1",
+    "@react-three/drei": "^9.11.0",
+    "@react-three/fiber": "^8.0.17",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "dotenv": "^16.0.1",
+    "file-saver": "^2.0.5",
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
     "react": "^18.1.0",
@@ -17,8 +21,11 @@
     "react-google-login": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-toastify": "^5.5.0"
+    "react-toastify": "^5.5.0",
+    "three": "^0.140.2",
+    "three-gltf-exporter": "^0.0.1"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
