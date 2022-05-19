@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './private.css'
 import authSvg from '../assests/reset.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
@@ -54,7 +55,7 @@ const ResetPassword = ({match}) => {
       <div className='max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1'>
         <div className='lg:w-1/2 xl:w-5/12 p-6 sm:p-12'>
           <div className='mt-12 flex flex-col items-center'>
-            <h1 className='text-2xl xl:text-3xl font-extrabold'>
+            <h1 className='text-2xl xl:text-3xl font-extrabold profile-text'>
               Reset Your Password
             </h1>
             <div className='w-full flex-1 mt-8 text-indigo-500'>

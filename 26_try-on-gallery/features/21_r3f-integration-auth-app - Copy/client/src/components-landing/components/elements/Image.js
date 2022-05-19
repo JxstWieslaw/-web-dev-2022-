@@ -24,6 +24,7 @@ const Image = ({
   width,
   height,
   alt,
+  style,
   ...props
 }) => {
 
@@ -69,6 +70,7 @@ const Image = ({
       className={className}
       src={src}
       width={width}
+      style={style}
       height={height}
       alt={alt}
       onLoad={onLoad} />

@@ -3,6 +3,10 @@ import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import img1 from './../../assets/images/features-split-image-01.gif';
+import img2 from './../../assets/images/features-split-image-02.png';
+import img3 from './../../assets/images/features-split-image-03.png';
+
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -50,8 +54,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Workflow that just works',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'Why 3DBuy 3D Configuration',
+    paragraph: 'Well here is why!'
   };
 
   return (
@@ -67,13 +71,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  3D THAT SCALES
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                  Show every potential product customization, in real time
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Threekit combines your product catalog with 3D artistry so you can show millions or even billions of potential configurations in real time.
                   </p>
               </div>
               <div className={
@@ -83,7 +87,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-01.png')}
+                  src={img1}
                   alt="Features split 01"
                   width={528}
                   height={396} />
@@ -93,13 +97,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                BUYER ENGAGEMENT
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                Give your shoppers ownership of the product so they’ll press “buy”
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                When shoppers use a 3D configurator, they are 20% more likely to buy a product. It gets them involved in the process and allows them to make it their own.
                   </p>
               </div>
               <div className={
@@ -109,7 +113,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-02.png')}
+                  src={img2}
                   alt="Features split 02"
                   width={528}
                   height={396} />
@@ -119,13 +123,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                TEAM EFFICIENCY
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                Make your team better while making your product experience better
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                From 3D asset management to a code-free product catalog – Threekit makes it easy to collaborate across teams for a great result.
                   </p>
               </div>
               <div className={
@@ -135,10 +139,9 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-03.png')}
+                  src={img3}
                   alt="Features split 03"
-                  width={528}
-                  height={396} />
+                  style = {{maxWidth:"100%",height:"auto"}} />
               </div>
             </div>
 
