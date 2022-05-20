@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import  './login.css'
+import "./login.css";
 import authSvg from "../assests/login.svg";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
@@ -35,12 +35,18 @@ const Login = ({ history }) => {
         console.log("GOOGLE SIGNIN ERROR", error.response);
       });
   };
+  // const informParent = (response) => {
+  //   authenticate(response, () => {
+  //     console.log("here")
+  //     isAuth() && isAuth().role === "admin"
+  //       ? history.push("/admin")
+  //       : history.push("/private");
+  //   });
+  // };
   const informParent = (response) => {
     authenticate(response, () => {
-      console.log("here")
-      isAuth() && isAuth().role === "admin"
-        ? history.push("/admin")
-        : history.push("/private");
+      console.log("here");
+      isAuth() && history.push("/configurator");
     });
   };
 
@@ -157,7 +163,9 @@ const Login = ({ history }) => {
                       <div className=" p-1 rounded-full ">
                         <i className="fab fa-facebook" />
                       </div>
-                      <span className="ml-4 log-in-text">Sign In with Facebook</span>
+                      <span className="ml-4 log-in-text">
+                        Sign In with Facebook
+                      </span>
                     </button>
                   )}
                 />

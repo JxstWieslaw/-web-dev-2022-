@@ -19,6 +19,7 @@ import { GLTFExporter } from "../exporter/GLTFExporter";
 import { Button } from "@material-ui/core";
 
 function Support({ ...props }) {
+  console.log(props.color + " " + props.texture);
   const group = useRef();
   const name = "SP";
   const { nodes, materials } = useGLTF("/support.glb");
@@ -58,8 +59,14 @@ function Back({ ...props }) {
   const name = "BK";
   const { nodes, materials } = useGLTF("/back.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.back.geometry}
         material={materials.aiStandardSurface1}
@@ -87,8 +94,14 @@ function Back1({ ...props }) {
   const name = "BK1";
   const { nodes, materials } = useGLTF("/back1.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.back1.geometry}
         material={materials.aiStandardSurface1}
@@ -117,8 +130,14 @@ function Back2({ ...props }) {
   const name = "BK2";
   const { nodes, materials } = useGLTF("/back2.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.back2.geometry}
         material={materials.aiStandardSurface1}
@@ -142,13 +161,19 @@ function Back2({ ...props }) {
   );
 }
 function Base({ ...props }) {
-  console.log(props)
+  console.log(props);
   const group = useRef();
   const name = "BS";
   const { nodes, materials } = useGLTF("/base.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.base.geometry}
         material={materials.aiStandardSurface1}
@@ -176,8 +201,14 @@ function Base1({ ...props }) {
   const name = "BS1";
   const { nodes, materials } = useGLTF("/base1.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.base1.geometry}
         material={materials.aiStandardSurface1}
@@ -205,8 +236,14 @@ function Base2({ ...props }) {
   const name = "BS2";
   const { nodes, materials } = useGLTF("/base2.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.base2.geometry}
         material={materials.aiStandardSurface1}
@@ -234,8 +271,14 @@ function Head({ ...props }) {
   const name = "H";
   const { nodes, materials } = useGLTF("/head.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.head.geometry}
         material={materials.aiStandardSurface1}
@@ -263,8 +306,14 @@ function Head1({ ...props }) {
   const name = "H1";
   const { nodes, materials } = useGLTF("/head1.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.head1.geometry}
         material={materials.aiStandardSurface1}
@@ -292,8 +341,14 @@ function LeftArm({ ...props }) {
   const name = "LA";
   const { nodes, materials } = useGLTF("/L_arm.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.L_arm.geometry}
         material={materials.aiStandardSurface1}
@@ -321,8 +376,14 @@ function LeftArm1({ ...props }) {
   const name = "LA1";
   const { nodes, materials } = useGLTF("/L_arm1.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.L_arm1.geometry}
         material={materials.aiStandardSurface1}
@@ -351,8 +412,14 @@ function LeftArm2({ ...props }) {
   const name = "LA2";
   const { nodes, materials } = useGLTF("/L_arm2.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.L_arm2.geometry}
         material={materials.aiStandardSurface1}
@@ -380,8 +447,14 @@ function RightArm1({ ...props }) {
   const name = "RA1";
   const { nodes, materials } = useGLTF("/R_arm1.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.R_arm1.geometry}
         material={materials.aiStandardSurface1}
@@ -410,8 +483,14 @@ function RightArm2({ ...props }) {
   const name = "RA2";
   const { nodes, materials } = useGLTF("/R_arm2.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.R_arm2.geometry}
         material={materials.aiStandardSurface1}
@@ -439,8 +518,14 @@ function RightArm3({ ...props }) {
   const name = "RA3";
   const { nodes, materials } = useGLTF("/R_arm3.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.R_arm3.geometry}
         material={materials.aiStandardSurface1}
@@ -468,8 +553,14 @@ function Seat({ ...props }) {
   const name = "ST";
   const { nodes, materials } = useGLTF("/seat.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.seat.geometry}
         material={materials.aiStandardSurface1}
@@ -497,8 +588,14 @@ function Seat1({ ...props }) {
   const name = "ST1";
   const { nodes, materials } = useGLTF("/seat1.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.seat1.geometry}
         material={materials.aiStandardSurface1}
@@ -526,8 +623,14 @@ function Seat2({ ...props }) {
   const name = "LA1";
   const { nodes, materials } = useGLTF("/seat2.glb");
   return (
-    <group name={name} ref={group} {...props} dispose={null} scale={0.5}
-    position={[0, -1, 0]}>
+    <group
+      name={name}
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position={[0, -1, 0]}
+    >
       <mesh
         geometry={nodes.seat2.geometry}
         material={materials.aiStandardSurface1}
@@ -582,6 +685,7 @@ function saveArrayBuffer(buffer) {
   };
   saveFile();
 }
+
 function DownloadBtn({ onClick }) {
   return (
     <>
@@ -592,7 +696,27 @@ function DownloadBtn({ onClick }) {
   );
 }
 
-function Home() {
+function SignoutBtn({ onClick }) {
+  return (
+    <>
+      <Button onClick={onClick} variant="contained" color="primary">
+        Sign Out
+      </Button>
+    </>
+  );
+}
+
+function ProfileBtn({ onClick }) {
+  return (
+    <>
+      <Button onClick={onClick} variant="contained" color="primary">
+        Profile
+      </Button>
+    </>
+  );
+}
+
+function Home({history}) {
   //currently used activeOption
   const [activeOption, setActiveOption] = useState(0);
 
@@ -1020,6 +1144,7 @@ function Home() {
       ),
       size: [2, 2, 2],
       shininess: 60,
+      color: null,
     },
     {
       texture: useLoader(
@@ -1028,6 +1153,7 @@ function Home() {
       ),
       size: [4, 4, 4],
       shininess: 0,
+      color: null,
     },
     {
       texture: useLoader(
@@ -1036,6 +1162,7 @@ function Home() {
       ),
       size: [8, 8, 8],
       shininess: 10,
+      color: null,
     },
     {
       texture: useLoader(
@@ -1044,6 +1171,7 @@ function Home() {
       ),
       size: [3, 3, 3],
       shininess: 0,
+      color: null,
     },
     {
       texture: useLoader(
@@ -1052,6 +1180,7 @@ function Home() {
       ),
       size: [6, 6, 6],
       shininess: 0,
+      color: null,
     },
     {
       color: "#131417",
@@ -1065,7 +1194,6 @@ function Home() {
     {
       color: "#7f8a93",
     },
-    ,
     {
       color: "#97a1a7",
     },
@@ -1207,8 +1335,10 @@ function Home() {
   ];
 
   function handleColorChange(index) {
+    console.log(index);
     let color = colorChange[index];
     let new_mtl;
+    console.log(color.texture);
 
     if (color.texture) {
       let cur = color.texture;
@@ -1220,6 +1350,7 @@ function Home() {
         shininess: color.shininess ? color.shininess : 10,
       };
       if (activeOption === 0) {
+        console.log("In the loop");
         if (appliedRightArm === "RA1") {
           setTextureRA1(new_mtl);
           setColorRA1(null);
@@ -1252,52 +1383,42 @@ function Home() {
           setTextureBS2(new_mtl);
           setColorBS2(null);
         }
-      }
-    } else if (activeOption === 2) {
-      if (appliedBase === "BS") {
-        setTextureBS(new_mtl);
-        setColorBS(null);
-      } else if (appliedBase === "BS1") {
-        setTextureBS1(new_mtl);
-        setColorBS1(null);
-      } else if (appliedBase === "BS2") {
-        setTextureBS2(new_mtl);
-        setColorBS2(null);
-      }
-    } else if (activeOption === 3) {
-      if (appliedBack === "BK") {
-        setTextureBK(new_mtl);
-        setColorBK(null);
-      } else if (appliedBack === "BK1") {
-        setTextureBK1(new_mtl);
-        setColorBK1(null);
-      } else if (appliedBack === "BK2") {
-        setTextureBK2(new_mtl);
-        setColorBK2(null);
-      }
-    } else if (activeOption === 4) {
-      if (appliedHead === "H") {
-        setTextureH(new_mtl);
-        setColorH(null);
-      } else if (appliedHead === "H1") {
-        setTextureH1(new_mtl);
-        setColorH1(null);
-      }
-    } else if (activeOption === 5) {
-      if (appliedSeat === "ST") {
-        setTextureST(new_mtl);
-        setColorBS(null);
-      } else if (appliedSeat === "ST1") {
-        setTextureST1(new_mtl);
-        setColorST1(null);
-      } else if (appliedSeat === "ST2") {
-        setTextureST2(new_mtl);
-        setColorST2(null);
-      }
-    } else if (activeOption === 6) {
-      if (appliedSupport === "SP") {
-        setTextureSP(new_mtl);
-        setColorSP(null);
+      } else if (activeOption === 3) {
+        if (appliedBack === "BK") {
+          setTextureBK(new_mtl);
+          setColorBK(null);
+        } else if (appliedBack === "BK1") {
+          setTextureBK1(new_mtl);
+          setColorBK1(null);
+        } else if (appliedBack === "BK2") {
+          setTextureBK2(new_mtl);
+          setColorBK2(null);
+        }
+      } else if (activeOption === 4) {
+        if (appliedHead === "H") {
+          setTextureH(new_mtl);
+          setColorH(null);
+        } else if (appliedHead === "H1") {
+          setTextureH1(new_mtl);
+          setColorH1(null);
+        }
+      } else if (activeOption === 5) {
+        if (appliedSeat === "ST") {
+          setTextureST(new_mtl);
+          setColorBS(null);
+        } else if (appliedSeat === "ST1") {
+          setTextureST1(new_mtl);
+          setColorST1(null);
+        } else if (appliedSeat === "ST2") {
+          setTextureST2(new_mtl);
+          setColorST2(null);
+        }
+      } else if (activeOption === 6) {
+        console.log("reached safely");
+        if (appliedSupport === "SP") {
+          setTextureSP(new_mtl);
+          setColorSP(null);
+        }
       }
     } else {
       new_mtl = {
@@ -1374,7 +1495,6 @@ function Home() {
         }
       }
     }
-    console.log(new_mtl);
   }
 
   const colorMap = function DoSomething() {
@@ -1466,14 +1586,20 @@ function Home() {
       <div className="download-btn">
         <DownloadBtn onClick={() => setClicked(true)} />
       </div>
+      <div className="signout-btn">
+        <SignoutBtn  />
+      </div>
+      <div className="update-profile">
+        <ProfileBtn  />
+      </div>
 
       {/* The Canvas element is used to draw the 3D scene  */}
       <div className="product-canvas">
-        <Canvas >
+        <Canvas linear flat>
           <Suspense fallback={null}>
             <Foo updateClick={updateClick} download={clicked} />
             <ambientLight />
-            <directionalLight />
+            <directionalLight intensity={0.1}/>
             <spotLight
               intensity={0.1}
               angle={0.1}
@@ -1482,23 +1608,59 @@ function Home() {
               castShadow
             />
             <Support texture={textureSP} color={colorSP} />
-            <Back texture={textureBK} color={colorBK} />
-            <Back1 texture={textureBK1} color={colorBK1} />
-            <Back2 texture={textureBK2} color={colorBK2} />
-            <Base texture={textureBS} color={colorBS} />
-            <Base1 texture={textureBS1} color={colorBS1} />
-            <Base2 texture={textureBS2} color={colorBS2} />
-            <Head texture={textureH} color={colorH} />
-            <Head1 texture={textureH1} color={colorH1} />
-            <LeftArm texture={textureLA} color={colorLA} />
-            <LeftArm1 texture={textureLA1} color={colorLA1} />
-            <LeftArm2 texture={textureLA2} color={colorLA2} />
-            <RightArm3 texture={textureRA3} color={colorRA3} />
-            <RightArm1 texture={textureRA1} color={colorRA1} />
-            <RightArm2 texture={textureRA2} color={colorRA2} />
-            <Seat texture={textureST} color={colorST} />
-            <Seat1 texture={textureST1} color={colorST1} />
-            <Seat2 texture={textureST2} color={colorST2} />
+            {appliedBack === "BK" && (
+              <Back texture={textureBK} color={colorBK} />
+            )}
+            {appliedBack === "BK1" && (
+              <Back1 texture={textureBK1} color={colorBK1} />
+            )}
+            {appliedBack === "BK2" && (
+              <Back2 texture={textureBK2} color={colorBK2} />
+            )}
+
+            {appliedBase === "BS" && (
+              <Base texture={textureBS} color={colorBS} />
+            )}
+            {appliedBase === "BS1" && (
+              <Base1 texture={textureBS1} color={colorBS1} />
+            )}
+            {appliedBase === "BS2" && (
+              <Base2 texture={textureBS2} color={colorBS2} />
+            )}
+
+            {appliedHead === "H" && <Head texture={textureH} color={colorH} />}
+            {appliedHead === "H1" && (
+              <Head1 texture={textureH1} color={colorH1} />
+            )}
+
+            {appliedLeftArm === "LA" && (
+              <LeftArm texture={textureLA} color={colorLA} />
+            )}
+            {appliedLeftArm === "LA1" && (
+              <LeftArm1 texture={textureLA1} color={colorLA1} />
+            )}
+            {appliedLeftArm === "LA2" && (
+              <LeftArm2 texture={textureLA2} color={colorLA2} />
+            )}
+
+            {appliedRightArm === "RA1" && (
+              <RightArm1 texture={textureRA1} color={colorRA1} />
+            )}
+            {appliedRightArm === "RA2" && (
+              <RightArm2 texture={textureRA2} color={colorRA2} />
+            )}
+            {appliedRightArm === "RA3" && (
+              <RightArm3 texture={textureRA3} color={colorRA3} />
+            )}
+            {appliedSeat === "ST" && (
+              <Seat texture={textureST} color={colorST} />
+            )}
+            {appliedSeat === "ST1" && (
+              <Seat1 texture={textureST1} color={colorST1} />
+            )}
+            {appliedSeat === "ST2" && (
+              <Seat2 texture={textureST2} color={colorST2} />
+            )}
             {/* 
             {appliedRightArm === "RA" ? (
               <RightHand2Model texture={textureRH2} color={colorRH2} />

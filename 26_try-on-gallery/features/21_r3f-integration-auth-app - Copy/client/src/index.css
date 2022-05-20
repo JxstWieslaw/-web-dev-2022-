@@ -128,7 +128,7 @@ html {
   height: 90%;
   width: 90%;
   background-color: rgba(255, 255, 255, 0.3);
-}
+} 
 
 .attachment-choices {
   display: flex;
@@ -136,7 +136,7 @@ html {
   height: min-content;
   width: auto;
   height: 3rem;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 .attachment-choices-legs {
@@ -182,7 +182,7 @@ html {
 
 .change-objects {
   position: absolute;
-  top: 0;
+  top: 0.5em;
   width: 100%;
 }
 
@@ -199,9 +199,21 @@ html {
 
 .download-btn {
   position: absolute;
-  right: 0;
+  right: 0.5em;
+  top:0.5em;
 }
 
+.signout-btn{
+  position: absolute !important;
+  right: 0.5em !important;
+  top:4em !important;
+}
+
+.update-profile{
+  position: absolute !important;
+  right: 0.5em !important;
+  top:7.2em !important;
+}
 .option {
   background-size: cover;
   background-position: 50%;

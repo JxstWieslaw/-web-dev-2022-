@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { isAuth } from '../helpers/auth';
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
+const ConfiguratorRoute = ({ component: Component, ...rest }) => (
     <Route
         {...rest}
         render={props =>
@@ -11,7 +11,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
             ) : (
                 <Redirect
                     to={{
-                        pathname: '/configurator',
+                        pathname: '/login',
                         state: { from: props.location }
                     }}
                 />
@@ -20,4 +20,4 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     ></Route>
 );
 
-export default PrivateRoute;
+export default ConfiguratorRoute;

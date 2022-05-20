@@ -13,6 +13,7 @@ import ResetPassword from "./screens/ResetPassword.jsx";
 import PrivateRoute from "./Routes/PrivateRoute";
 import AdminRoute from "./Routes/AdminRoute";
 import "react-toastify/dist/ReactToastify.css";
+import ConfiguratorRoute from "./Routes/ConfiguratorRoute.jsx";
 
 global.Buffer = Buffer;
 
@@ -25,14 +26,6 @@ class App extends Component {
   }
   render() {
     return (
-      //React-Router-Dom V6
-      // <Router>
-      //   <Routes >
-      //   <Route exact path='/' element={<Login/>}/>
-      //   <Route exact path='/signup' element={<Signup/>}/>
-      //   <Route exact path='/home' element={<Home/>}/>
-      //   </Routes>
-      // </Router>
       <BrowserRouter>
         <Switch>
           <Route
@@ -61,11 +54,7 @@ class App extends Component {
             exact
             render={(props) => <Activate {...props} />}
           />
-          <Route
-            path="/configurator"
-            exact
-            render={(props) => <Configurator {...props} />}
-          />
+          
           <Route
             path="/"
             exact
@@ -73,6 +62,7 @@ class App extends Component {
           />
           <PrivateRoute path="/private" exact component={Private} />
           <AdminRoute path="/admin" exact component={Admin} />
+          <ConfiguratorRoute path="/configurator" exact component={Configurator} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>
