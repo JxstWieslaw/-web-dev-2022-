@@ -30,7 +30,7 @@ function Support({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.support.geometry}
@@ -65,7 +65,7 @@ function Back({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.back.geometry}
@@ -100,7 +100,7 @@ function Back1({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.back1.geometry}
@@ -136,7 +136,7 @@ function Back2({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.back2.geometry}
@@ -172,7 +172,7 @@ function Base({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.base.geometry}
@@ -207,7 +207,7 @@ function Base1({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.base1.geometry}
@@ -242,7 +242,7 @@ function Base2({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.base2.geometry}
@@ -277,7 +277,7 @@ function Head({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.head.geometry}
@@ -312,7 +312,7 @@ function Head1({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.head1.geometry}
@@ -347,7 +347,7 @@ function LeftArm({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.L_arm.geometry}
@@ -382,7 +382,7 @@ function LeftArm1({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.L_arm1.geometry}
@@ -418,7 +418,7 @@ function LeftArm2({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.L_arm2.geometry}
@@ -453,7 +453,7 @@ function RightArm1({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.R_arm1.geometry}
@@ -489,7 +489,7 @@ function RightArm2({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.R_arm2.geometry}
@@ -524,7 +524,7 @@ function RightArm3({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.R_arm3.geometry}
@@ -559,7 +559,7 @@ function Seat({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.seat.geometry}
@@ -594,7 +594,7 @@ function Seat1({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.seat1.geometry}
@@ -629,7 +629,7 @@ function Seat2({ ...props }) {
       {...props}
       dispose={null}
       scale={0.5}
-      position={[0, -1, 0]}
+      position={[0, -2, 0]}
     >
       <mesh
         geometry={nodes.seat2.geometry}
