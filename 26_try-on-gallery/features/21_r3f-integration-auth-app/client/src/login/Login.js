@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import { axiosInstance } from "../config";
 
 class Login extends Component {
   constructor() {
@@ -20,8 +20,8 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password,
     };
-    await axios
-      .post("http://localhost:5000/login", this.senddata)
+    await axiosInstance
+      .post("/login", this.senddata)
       .then((Response) => {
         if (Response.data.user) {
           localStorage.setItem("token", Response.data.user);
@@ -75,7 +75,7 @@ class Login extends Component {
               />
               <div className="form__input-error-message"></div>
             </div>
-            <button className="form__button">Continue</button>
+            <button type="submit" className="form__button">Continue</button>
             <p className="form__text">
               <Link to="/forgotPassword" className="form__link">
                 Forgot your password

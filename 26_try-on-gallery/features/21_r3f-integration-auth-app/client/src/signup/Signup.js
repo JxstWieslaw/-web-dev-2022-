@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 import "./Signup.css";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import { axiosInstance } from "../config";
 
 class Signup extends Component {
   constructor() {
@@ -27,8 +28,8 @@ class Signup extends Component {
         password: this.state.password,
         confirmPassword: this.state.confirmPassword,
       };
-      await axios
-        .post("http://localhost:5000/signup", this.senddata)
+      await axiosInstance
+        .post("/signup", this.senddata)
         .then((Response) => alert(Response.data))
         .catch((Error) => {
           alert(Error);

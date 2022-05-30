@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 
     return res.json({ status: "ok", quote: user.quote });
   } catch (error) {
-    console.log(errorr);
+    console.log(error);
     res.json({ status: "error", error: "invalid token" });
   }
 });
