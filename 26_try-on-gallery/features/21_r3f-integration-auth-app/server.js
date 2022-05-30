@@ -11,11 +11,11 @@ app.use(express.json());
 //import route files
 const signup = require("./signup/signuproute");
 const login = require("./login/loginroute");
-const home = require("./home/homeroute");
+// const home = require("./home/homeroute");
 
 app.use("/signup", signup);
 app.use("/login", login);
-app.use("/home", home);
+// app.use("/home", home);
 
 //connecting to database
 mongoose.connect(

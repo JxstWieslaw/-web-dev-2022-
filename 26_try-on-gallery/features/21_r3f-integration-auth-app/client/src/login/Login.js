@@ -26,6 +26,7 @@ class Login extends Component {
         if (Response.data.user) {
           localStorage.setItem("token", Response.data.user);
           alert("Login Successful");
+          // await axiosInstance.get("/home",)
           window.location.href = "/home";
         }
         // if (Response.data.valid) {
