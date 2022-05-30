@@ -766,6 +766,8 @@ function Home({history}) {
   const [textureST1, setTextureST1] = useState(null);
   const [colorST2, setColorST2] = useState(null);
   const [textureST2, setTextureST2] = useState(null);
+
+  // For the GLTF Exporter to trigger rendering of full scene
   const [clicked, setClicked] = useState(false);
   const updateClick = (value) => {
     setClicked(value);

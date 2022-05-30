@@ -6,7 +6,7 @@ import Register from "./screens/Register.jsx";
 import Activate from "./screens/Activate.jsx";
 import Private from "./screens/Private.jsx";
 import Admin from "./screens/Admin.jsx";
-import Configurator from "./components-configurator1/home/Home";
+import Configurator from "./components-configurator/home/Home";
 import LandingPage from "./components-landing";
 import ForgetPassword from "./screens/ForgetPassword.jsx";
 import ResetPassword from "./screens/ResetPassword.jsx";

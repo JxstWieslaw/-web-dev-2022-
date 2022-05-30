@@ -77,7 +77,7 @@ const FeaturesSplit = ({
                   Show every potential product customization, in real time
                   </h3>
                 <p className="m-0">
-                Threekit combines your product catalog with 3D artistry so you can show millions or even billions of potential configurations in real time.
+                3DBuy combines your product catalog with 3D artistry so you can show millions or even billions of potential configurations in real time.
                   </p>
               </div>
               <div className={

@@ -120,7 +120,7 @@ const Login = ({ history }) => {
         <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
           <div className="mt-12 flex flex-col items-center">
             <h1 className="text-2xl xl:text-3xl font-extrabold log-in-text">
-              Sign Into CodeVilla
+              Sign Into 3DBuy
             </h1>
             <div className="w-full flex-1 mt-8 text-indigo-500">
               <div className="flex flex-col items-center">
@@ -130,27 +130,6 @@ const Login = ({ history }) => {
                     console.log("Login Failed");
                   }}
                 />
-
-                {/* <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true"></div>
-                <div
-                  id="spinner"
-                  style={
-                    ({ background: "#4267b2" },
-                    { borderRadius: "5px" },
-                    { color: "white" },
-                    { height: "40px" },
-                    { textAAlign: "center" },
-                    { width: "250px" })
-                  }
-                >
-                  <div
-                    class="fb-login-button"
-                    data-max-rows="1"
-                    data-size="large"
-                    data-button-type="continue_with"
-                    data-use-continue-as="true"
-                  ></div>
-                </div> */}
                 <FacebookLogin
                   appId={`${process.env.REACT_APP_FACEBOOK_CLIENT}`}
                   autoLoad={false}
