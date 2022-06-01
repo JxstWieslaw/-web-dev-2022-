@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no"
+    />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <div
+      id="sync1"
+      class="owl-carousel owl-theme"
+      style="position: fixed; visibility: hidden"
+    >
+      <div class="item">
+        <h1>1</h1>
+      </div>
+      <div class="item">
+        <h1>2</h1>
+      </div>
+      <div class="item">
+        <h1>3</h1>
+      </div>
+      <div class="item">
+        <h1>4</h1>
+      </div>
+      <div class="item">
+        <h1>5</h1>
+      </div>
+      <div class="item">
+        <h1>6</h1>
+      </div>
+      <div class="item">
+        <h1>7</h1>
+      </div>
+      <div class="item">
+        <h1>8</h1>
+      </div>
+      <div class="item">
+        <h1>1</h1>
+      </div>
+      <div class="item">
+        <h1>2</h1>
+      </div>
+      <div class="item">
+        <h1>3</h1>
+      </div>
+      <div class="item">
+        <h1>4</h1>
+      </div>
+      <div class="item">
+        <h1>5</h1>
+      </div>
+      <div class="item">
+        <h1>6</h1>
+      </div>
+      <div class="item">
+        <h1>7</h1>
+      </div>
+      <div class="item">
+        <h1>8</h1>
+      </div>
+      <div class="item">
+        <h1>1</h1>
+      </div>
+      <div class="item">
+        <h1>2</h1>
+      </div>
+      <div class="item">
+        <h1>3</h1>
+      </div>
+      <div class="item">
+        <h1>4</h1>
+      </div>
+      <div class="item">
+        <h1>5</h1>
+      </div>
+      <div class="item">
+        <h1>6</h1>
+      </div>
+      <div class="item">
+        <h1>7</h1>
+      </div>
+      <div class="item">
+        <h1>8</h1>
+      </div>
+    </div>
+    <!-- IMAGE SLIDER  -->
+    <div id="sync2" class="owl-carousel owl-theme" style="display: none"></div>
+
+    <div class="placeText" id="sliderText">Crowne Plaza</div>
+
+    <div class="screen_lock_wrp" id="content-cover">
+      <!-- <p>
+            Let's begin Virtual Walkthrough. <br> Crown Plaza, Ahmedabad.
+        </p>
+        <p><a id="playaudio" class="screen_lock_btn">Click Here</a></p> -->
+
+      <p style="color: #c60073">Crowne Plaza</p>
+      <p>
+        <a class="play_icon_int" id="playaudio"
+          ><i class="fas fa-play-circle"></i
+        ></a>
+      </p>
+      <p>Crowne Plaza Ahmedabad</p>
+    </div>
+
+    <!-- SEARCHING -->
+    <a href="" class="info_icon_ri_botm">
+      <img
+        src="assets/img/intro/info.svg"
+        style="width: 25px; filter: invert(1)"
+      />
+    </a>
+    <button
+      href="javascript:void(0)"
+      onclick="enable_search()"
+      class="srh_icon_ri_botm"
+    >
+      <img
+        src="assets/img/intro/magnifying-glass.svg"
+        style="width: 25px; filter: invert(1)"
+      />
+    </button>
+
+    <div class="search_poup" style="display: none" id="search_box">
+      <div class="search_poup_inner">
+        <div class="search_poup_wrp">
+          <input
+            type="text"
+            autofocus
+            class="search_poup_fild"
+            placeholder="Search"
+            onpropertychange
+            autocomplete="off"
+            onkeyuponpaste
+            oninput
+            onchange
+            onkeyup="searchPano()"
+            id="search_text"
+          />
+          <button type="button" class="search_poup_btn">
+            <img
+              src="assets/img/intro/magnifying-glass.svg"
+              style="width: 25px"
+            />
+          </button>
+        </div>
+
+        <ul class="search_poup_li" id="search_ul">
+          <!-- <li>
+            <div class="search_poup_li_img"><img src="" style="width:100px;"></div>
+            <div class="search_poup_li_txt">Crowne Plaza Ahmedabad</div>
+        </li> -->
+        </ul>
+      </div>
+    </div>
+
+    <audio src="./assets/voice/Introduction.mp3" id="welcomeaudio"></audio>
+
+    <audio src="./assets/voice/Music.mpeg" id="startingaudio" loop></audio>
+
+    <script src="./assets/panolens/three.min.js"></script>
+    <script src="./assets/panolens/panolens.min.js"></script>
+    <script src="./assets/js/search.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>
+    <script>
+      // IMAGE SLIDER JS
+      $(document).ready(function () {
+        var sync1 = $("#sync1");
+        var sync2 = $("#sync2");
+        var hei = window.screen.height;
+        var wid = window.screen.width;
+        const ua = navigator.userAgent;
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+          // return "tablet";
+          var slidesPerPage = 3; //globaly define number of elements per page
+        }
+        if (
+          /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+            ua
+          )
+        ) {
+          // return "mobile";
+          var slidesPerPage = 3; //globaly define number of elements per page
+        } else {
+          var slidesPerPage = 5; //globaly define number of elements per page
+        }
+        var syncedSecondary = true;
+
+        sync1
+          .owlCarousel({
+            items: 1,
+            slideSpeed: 2000,
+            nav: true,
+            autoplay: false,
+            dots: true,
+            loop: false,
+            responsiveRefreshRate: 200,
+            navText: [
+              '<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>',
+              '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>',
+            ],
+          })
+          .on("changed.owl.carousel", syncPosition);
+
+        sync2
+          .on("initialized.owl.carousel", function () {
+            sync2.find(".owl-item").eq(0).addClass("current");
+          })
+          .owlCarousel({
+            items: slidesPerPage,
+            dots: true,
+            nav: true,
+            smartSpeed: 200,
+            slideSpeed: 500,
+            slideBy: 1, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+            responsiveRefreshRate: 100,
+          })
+          .on("changed.owl.carousel", syncPosition2);
+
+        function syncPosition(el) {
+          //if you set loop to false, you have to restore this next line
+          var current = el.item.index;
+
+          //if you disable loop you have to comment this block
+          // var count = el.item.count - 1;
+          // var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+
+          // if (current < 0) {
+          //     current = count;
+          // }
+          // if (current > count) {
+          //     current = 0;
+          // }
+
+          //end block
+
+          sync2
+            .find(".owl-item")
+            .removeClass("current")
+            .eq(current)
+            .addClass("current");
+          var onscreen = sync2.find(".owl-item.active").length - 1;
+          var start = sync2.find(".owl-item.active").first().index();
+          var end = sync2.find(".owl-item.active").last().index();
+
+          if (current > end) {
+            sync2.data("owl.carousel").to(current, 100, true);
+          }
+          if (current < start) {
+            sync2.data("owl.carousel").to(current - onscreen, 100, true);
+          }
+        }
+
+        function syncPosition2(el) {
+          if (syncedSecondary) {
+            var number = el.item.index;
+            sync1.data("owl.carousel").to(number, 100, true);
+          }
+        }
+
+        sync2.on("click", ".owl-item", function (e) {
+          e.preventDefault();
+          var number = $(this).index();
+          sync1.data("owl.carousel").to(number, 300, true);
+        });
+      });
+      // image slider ends here
+      current_path = "./assets/slider images/";
+      var images_array = [
+        "Crowne Plaza Main Entrance",
+        "Main Porch",
+        "Reception",
+        "Pre Function Area",
+        "Inspire",
+        "Inspire 1",
+        "Inspire 2",
+        "Inspire 3",
+        "Lobby",
+        "Aroma",
+        "Essence",
+        "Buffet Area",
+        "Spa and Gym",
+        "Treatment Room",
+        "Gym",
+        "Pool",
+        "Rang and Business Center",
+        "Rang",
+        "Board Room",
+        "Business Centre",
+        "Towards Room Corridor",
+        "Executive Suite - Living Room",
+        "Executive Suite Bedroom",
+        "Executive Suite Bathroom",
+        "Deluxe Twin Room",
+        "Twin Room Bathroom",
+        "Deluxe King Room",
+        "Junior Suite",
+      ];
+      images = images_array.map((img_path) => current_path + img_path + ".jpg");
+      //console.log("thisi is final", images)
+      // var index = 0;
+
+      function buildImagesSlider() {
+        for (var i = 0; i < images.length; i++) {
+          if (i < images.length) {
+            var img = document.createElement("img");
+            var divOutside = document.createElement("div");
+            divOutside.classList.add("item");
+            var divInside = document.createElement("div");
+            divInside.classList.add("tooltip");
+            divInside.setAttribute("id", i);
+            divInside.addEventListener("click", function () {
+              console.log(this.id);
+              changePanoramaFromNextandPrevious(this.id);
+            });
+            divInside.title = images_array[i];
+            img.src = images[i];
+            document
+              .getElementById("sync2")
+              .appendChild(divOutside)
+              .appendChild(divInside)
+              .appendChild(img);
+          }
+        }
+      }
+      buildImagesSlider();
+
+      function entranceAudio() {
+        var hide = document.getElementById("content-cover");
+        hide.style.display = "none";
+        document.getElementById("welcomeaudio").play();
+      }
+      document
+        .getElementById("playaudio")
+        .addEventListener("click", entranceAudio);
+
+      function begin() {
+        document.getElementById("welcomeaudio").play();
+
+        document.getElementById("startingaudio").play();
+      }
+
+      function enable_search() {
+        document.getElementById("search_box").style.display = "block";
+
+        setTimeout(function () {
+          document.getElementById("search_text").focus();
+          // $("#input-field").focus();
+        }, 50);
+      }
+
+      document.getElementById("playaudio").addEventListener("click", begin);
+
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      // Image panorama starts here
+      const main_entrance = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Starting-min.jpg"
+      );
+      main_entrance.addEventListener("enter-fade-start", function () {
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Crowne Plaza Main Entrance";
+        viewer.tweenControlCenter(new THREE.Vector3(4871.39, -100, -500), 0);
+      });
+
+      const inside_poarch = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Main approaCH-min.jpg"
+      );
+      inside_poarch.addEventListener("enter-fade-start", function () {
+        pinfospot_exterior.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Main Porch";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3971.39, 0, -1050), 100);
+      });
+
+      const reception = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Reception-min.jpg"
+      );
+      reception.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        from_room_corridor_to_reception.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Reception";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const aroma_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Aroma 1-min.jpg"
+      );
+      aroma_main.addEventListener("enter-fade-start", function () {
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Aroma.mp3";
+        sounds.play();
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Aroma";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const aroma_1 = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Aroma-min.jpg"
+      );
+      aroma_1.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Aroma";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const ball_room = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Ball room-min.jpg"
+      );
+      ball_room.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+
+        // var sounds = document.getElementById("welcomeaudio");
+        // sounds.src = "./assets/voice/Ball room.mp3";
+        // sounds.play();
+
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Pre Function Area";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const ball_room_1 = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Ball room 1-min.jpg"
+      );
+      ball_room_1.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        ball_infospot.setText("");
+        from_ball_room_4_to_ball_room_1.setText("");
+
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Inspire 1 ";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const lobby_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Lobby-min.jpg"
+      );
+      lobby_main.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Lobby";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const essence_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Essence-min.jpg"
+      );
+      essence_main.addEventListener("enter-fade-start", function () {
+        to_essence_from_lobby.setText("");
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Essence.mp3";
+        sounds.play();
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Essence";
+
+        pinfospot_go_inside.setText("");
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const rang_business_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Rang and Business Center Corridor-min.jpg"
+      );
+      rang_business_main.addEventListener("enter-fade-start", function () {
+        to_rang_from_lobby.setText("");
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Rang And Business Center";
+
+        viewer.tweenControlCenter(new THREE.Vector3(6871.39, 0, 1850), 0);
+      });
+
+      const spa_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Spa-min.jpg"
+      );
+      spa_main.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Spa.mp3";
+        sounds.play();
+        document.getElementById("sliderText").innerHTML = "Crowne Plaza - Spa";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const inside_essence = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Essen 1-min.jpg"
+      );
+      inside_essence.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Buffet Area";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const gym_and_pool = new PANOLENS.ImagePanorama(
+        "assets/img/renders/GYm-min.jpg"
+      );
+      gym_and_pool.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        to_gym.setText("");
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Gym.mp3";
+        sounds.play();
+        document.getElementById("sliderText").innerHTML = "Crowne Plaza - Gym";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const treatment_room = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Treatment room-min.jpg"
+      );
+      treatment_room.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        to_treatment.setText("");
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Treatment Room.mp3";
+        sounds.play();
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Treatment Room";
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const pool_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Pool-min.jpg"
+      );
+      pool_main.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Pool.mp3";
+        sounds.play();
+        document.getElementById("sliderText").innerHTML = "Crowne Plaza - Pool";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const board_room_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Board Room-min.jpg"
+      );
+      board_room_main.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        // var sounds = document.getElementById("welcomeaudio");
+        // sounds.src = "./assets/voice/Board Room.mp3";
+        // sounds.play();
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Board Room";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const rang_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Rang-min.jpg"
+      );
+      rang_main.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        to_rang_main.setText("");
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Rang.mp3";
+        sounds.play();
+        document.getElementById("sliderText").innerHTML = "Crowne Plaza - Rang";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const business_center = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Business Centre-min.jpg"
+      );
+      business_center.addEventListener("enter-fade-start", function () {
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Business Centre.mp3";
+        sounds.play();
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Business Centre";
+
+        pinfospot_go_inside.setText("");
+        to_rang_business_center.setText("");
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const towards_room_coor = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Towards room cooridor-min.jpg"
+      );
+      towards_room_coor.addEventListener("enter-fade-start", function () {
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Towards Room & Corridor.mp3";
+        sounds.play();
+        pinfospot_go_inside.setText("");
+        to_room_coor.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Room Corridor";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const executive_room_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Executive room-min.jpg"
+      );
+      executive_room_main.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        to_executive_room.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Deluxe King Room";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const executive_room_inside = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Executive room 1-min.jpg"
+      );
+      executive_room_inside.addEventListener("enter-fade-start", function () {
+        from_suite_bedroom_to_executive_room.setText("");
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Executive Suite Bathroom";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const twins_room_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Executive twin room-min.jpg"
+      );
+      twins_room_main.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Deluxe Twin Room";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const twins_room_bathroom = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Executive twin 1-min.jpg"
+      );
+      twins_room_bathroom.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Twin Bathroom";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const suite_room_main = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Suit room-min.jpg"
+      );
+      suite_room_main.addEventListener("enter-fade-start", function () {
+        to_suite_room.setText("");
+        pinfospot_go_inside.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Executive Suite - Living Room";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const suite_room_bathroom = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Junior Suite Bedroom.jpg"
+      );
+      suite_room_bathroom.addEventListener("enter-fade-start", function () {
+        pinfospot_go_inside.setText("");
+        to_suite_bathroom.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Executive Suite Bedroom";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const ball_room_2 = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Ball Room 2.jpg"
+      );
+      ball_room_2.addEventListener("enter-fade-start", function () {
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Inspire 2";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const ball_room_3 = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Ball Room 3.jpg"
+      );
+      ball_room_3.addEventListener("enter-fade-start", function () {
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Inspire 3";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const ball_room_4 = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Ball Room 4.jpg"
+      );
+      ball_room_4.addEventListener("enter-fade-start", function () {
+        ball_infospot.setText(""); // remove hover
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Inspire";
+        var sounds = document.getElementById("welcomeaudio");
+        sounds.src = "./assets/voice/Inspire.mp3";
+        sounds.play();
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      const executive_suite_room = new PANOLENS.ImagePanorama(
+        "assets/img/renders/Suite room 1-min.jpg"
+      );
+      executive_suite_room.addEventListener("enter-fade-start", function () {
+        ball_infospot.setText(""); // remove hover
+        from_suite_bedroom_to_executive_room.setText("");
+        document.getElementById("sliderText").innerHTML =
+          "Crowne Plaza - Junior Suite";
+
+        viewer.tweenControlCenter(new THREE.Vector3(3871.39, 0, -250), 0);
+      });
+
+      /**** Hotspot starts here ****/
+      pinfospot_exterior = new PANOLENS.Infospot(300, "assets/img/1.png");
+      pinfospot_exterior.position.set(1800, -400, -200);
+      pinfospot_exterior.name = "Exterior View";
+      pinfospot_exterior.addHoverText("Crowne Plaza Main Entrance");
+      pinfospot_exterior.addEventListener("click", function () {
+        viewer.setPanorama(inside_poarch);
+      });
+      main_entrance.add(pinfospot_exterior);
+
+      pinfospot_go_inside = new PANOLENS.Infospot(300, "assets/img/intro/intro.jpg");
+      pinfospot_go_inside.position.set(1600, -400, -800);
+      pinfospot_go_inside.name = "Exterior View";
+      pinfospot_go_inside.addHoverText("Main Porch");
+      pinfospot_go_inside.addEventListener("click", function () {
+        viewer.setPanorama(reception);
+      });
+      inside_poarch.add(pinfospot_go_inside);
+
+      pinfospot_go_outside = new PANOLENS.Infospot(300, "assets/img/3.png");
+      pinfospot_go_outside.position.set(-1000, -460, -260);
+      pinfospot_go_outside.name = "Exterior View";
+      pinfospot_go_outside.addHoverText("Go Outside");
+      pinfospot_go_outside.addEventListener("click", function () {
+        viewer.setPanorama(inside_poarch);
+      });
+      reception.add(pinfospot_go_outside);
+
+      /**** reception ****/
+      pinfospot_go_left = new PANOLENS.Infospot(300, "assets/img/4.png");
+      pinfospot_go_left.position.set(-600, -370, -2500);
+      pinfospot_go_left.name = "Exterior View";
+      pinfospot_go_left.addHoverText("Aroma");
+      pinfospot_go_left.addEventListener("click", function () {
+        viewer.setPanorama(aroma_main);
+      });
+      reception.add(pinfospot_go_left);
+
+      pinfospot_go_right = new PANOLENS.Infospot(300, "assets/img/5.png");
+      pinfospot_go_right.position.set(400, -500, 1660);
+
+      pinfospot_go_right.name = "Exterior View";
+      pinfospot_go_right.addHoverText("Pre Function Area");
+      pinfospot_go_right.addEventListener("click", function () {
+        viewer.setPanorama(ball_room);
+      });
+      reception.add(pinfospot_go_right);
+
+      pinfospot_go_mid = new PANOLENS.Infospot(300, "assets/img/6.png");
+      pinfospot_go_mid.position.set(500, -370, -1800);
+      pinfospot_go_mid.name = "Exterior View";
+      pinfospot_go_mid.addHoverText("Lobby");
+      pinfospot_go_mid.addEventListener("click", function () {
+        viewer.setPanorama(lobby_main);
+      });
+      reception.add(pinfospot_go_mid);
+
+      ball_infospot = new PANOLENS.Infospot(300, "assets/img/7.png");
+      ball_infospot.position.set(1280, -1000, -460);
+      ball_infospot.name = "Exterior View";
+      ball_infospot.addHoverText("Inspire");
+      ball_infospot.addEventListener("click", function () {
+        viewer.setPanorama(ball_room_4);
+      });
+      ball_room.add(ball_infospot);
+
+      aroma_out = new PANOLENS.Infospot(300, "assets/img/8.png");
+      aroma_out.position.set(580, -450, 1700);
+      aroma_out.name = "Exterior View";
+      aroma_out.addHoverText("Go To Lobby");
+      aroma_out.addEventListener("click", function () {
+        viewer.setPanorama(lobby_main);
+      });
+      aroma_main.add(aroma_out);
+
+      /**** lobby area ****/
+      // aroma_in_from_lobby = new PANOLENS.Infospot(300, "assets/img/9.png");
+      // aroma_in_from_lobby.position.set(200, -250, -1960);
+      // aroma_in_from_lobby.name = "Exterior View";
+      // aroma_in_from_lobby.addHoverText("Aroma");
+      // aroma_in_from_lobby.addEventListener("click", function() {
+      //     viewer.setPanorama(aroma_main);
+      // });
+
+      // lobby_main.add(aroma_in_from_lobby);
+
+      to_spa_from_lobby = new PANOLENS.Infospot(300, "assets/img/10.png");
+      to_spa_from_lobby.position.set(380, -300, 2570);
+      to_spa_from_lobby.name = "Exterior View";
+      //to_spa_from_lobby.addHoverText("Spa & Gym");
+      to_spa_from_lobby.addEventListener("click", function () {
+        viewer.setPanorama(spa_main);
+      });
+
+      lobby_main.add(to_spa_from_lobby);
+
+      to_essence_from_lobby = new PANOLENS.Infospot(300, "assets/img/11.png");
+      to_essence_from_lobby.position.set(1700, -400, -1250);
+      to_essence_from_lobby.name = "Exterior View";
+      to_essence_from_lobby.addHoverText("Essence");
+      to_essence_from_lobby.addEventListener("click", function () {
+        viewer.setPanorama(essence_main);
+      });
+
+      lobby_main.add(to_essence_from_lobby);
+
+      to_rang_from_lobby = new PANOLENS.Infospot(300, "assets/img/12.png");
+      to_rang_from_lobby.position.set(680, -300, 2070);
+      to_rang_from_lobby.name = "Exterior View";
+      to_rang_from_lobby.addHoverText("Rang & Business Center Corridor");
+      to_rang_from_lobby.addEventListener("click", function () {
+        viewer.setPanorama(rang_business_main);
+      });
+
+      lobby_main.add(to_rang_from_lobby);
+
+      to_child_essence = new PANOLENS.Infospot(300, "assets/img/13.png");
+      to_child_essence.position.set(840, -390, -2550);
+      to_child_essence.name = "Exterior View";
+      to_child_essence.addHoverText("Buffet Area");
+      to_child_essence.addEventListener("click", function () {
+        viewer.setPanorama(inside_essence);
+      });
+
+      essence_main.add(to_child_essence);
+
+      /**** spa hotspot ***/
+      to_treatment = new PANOLENS.Infospot(300, "assets/img/14.png");
+      to_treatment.position.set(1500, -550, -2750);
+      to_treatment.name = "Exterior View";
+      to_treatment.addHoverText("Treatment Room");
+      to_treatment.addEventListener("click", function () {
+        viewer.setPanorama(treatment_room);
+      });
+
+      spa_main.add(to_treatment);
+
+      to_gym = new PANOLENS.Infospot(300, "assets/img/15.png");
+      to_gym.position.set(1900, -500, -2000);
+      to_gym.name = "Exterior View";
+      to_gym.addHoverText("Gym");
+      to_gym.addEventListener("click", function () {
+        viewer.setPanorama(gym_and_pool);
+      });
+
+      spa_main.add(to_gym);
+
+      to_pool = new PANOLENS.Infospot(300, "assets/img/16.png");
+      to_pool.position.set(-1350, -450, 930);
+      to_pool.name = "Exterior View";
+      to_pool.addHoverText("Pool");
+      to_pool.addEventListener("click", function () {
+        viewer.setPanorama(pool_main);
+      });
+
+      gym_and_pool.add(to_pool);
+
+      /*** Rang hotspot starts here  ***/
+      board_room = new PANOLENS.Infospot(300, "assets/img/17.png");
+      board_room.position.set(-500, -450, -1670);
+      board_room.name = "Exterior View";
+      board_room.addHoverText("Board Room");
+      board_room.addEventListener("click", function () {
+        viewer.setPanorama(board_room_main);
+      });
+
+      rang_business_main.add(board_room);
+
+      to_rang_main = new PANOLENS.Infospot(300, "assets/img/18.png");
+      to_rang_main.position.set(2300, -250, 900);
+      to_rang_main.name = "Exterior View";
+      to_rang_main.addHoverText("Rang");
+      to_rang_main.addEventListener("click", function () {
+        viewer.setPanorama(rang_main);
+      });
+
+      rang_business_main.add(to_rang_main);
+
+      to_rang_business_center = new PANOLENS.Infospot(300, "assets/img/19.png");
+      to_rang_business_center.position.set(2200, -350, -970);
+      to_rang_business_center.name = "Exterior View";
+      to_rang_business_center.addHoverText("Business Center");
+      to_rang_business_center.addEventListener("click", function () {
+        viewer.setPanorama(business_center);
+      });
+
+      rang_business_main.add(to_rang_business_center);
+
+      to_room_coor = new PANOLENS.Infospot(300, "assets/img/20.png");
+      to_room_coor.position.set(-2700, -450, 970);
+      to_room_coor.name = "Exterior View";
+      to_room_coor.addHoverText("Room Corridor");
+      to_room_coor.addEventListener("click", function () {
+        viewer.setPanorama(towards_room_coor);
+      });
+
+      rang_business_main.add(to_room_coor);
+
+      /**** Towards room coor ****/
+      to_executive_room = new PANOLENS.Infospot(300, "assets/img/21.png");
+      to_executive_room.position.set(900, -470, 1890);
+      to_executive_room.name = "Exterior View";
+      to_executive_room.addHoverText("Deluxe King Room");
+      to_executive_room.addEventListener("click", function () {
+        viewer.setPanorama(executive_room_main);
+      });
+
+      towards_room_coor.add(to_executive_room);
+
+      to_executive_bathroom = new PANOLENS.Infospot(300, "assets/img/22.png");
+      to_executive_bathroom.position.set(-700, -750, -550);
+      to_executive_bathroom.name = "Exterior View";
+      to_executive_bathroom.addHoverText("Junior Suite");
+      to_executive_bathroom.addEventListener("click", function () {
+        viewer.setPanorama(executive_suite_room);
+      });
+
+      executive_room_main.add(to_executive_bathroom);
+
+      // to_executive_exit = new PANOLENS.Infospot(300, "assets/img/23.png");
+      // to_executive_exit.position.set(-2700, -250, -20);
+      // to_executive_exit.name = "Exterior View";
+      // to_executive_exit.addHoverText("Go Outside");
+      // to_executive_exit.addEventListener("click", function() {
+      //     viewer.setPanorama(towards_room_coor);
+      // });
+
+      // executive_room_main.add(to_executive_exit);
+
+      to_twin_room = new PANOLENS.Infospot(300, "assets/img/24.png");
+      to_twin_room.position.set(-300, -770, 1590);
+      to_twin_room.name = "Exterior View";
+      to_twin_room.addHoverText("Deluxe Room");
+      to_twin_room.addEventListener("click", function () {
+        viewer.setPanorama(twins_room_main);
+      });
+
+      towards_room_coor.add(to_twin_room);
+
+      to_suite_room = new PANOLENS.Infospot(300, "assets/img/25.png");
+      to_suite_room.position.set(-440, -450, -2580);
+      to_suite_room.name = "Exterior View";
+      to_suite_room.addHoverText("Executive Suite - Living Room");
+      to_suite_room.addEventListener("click", function () {
+        viewer.setPanorama(suite_room_main);
+      });
+
+      towards_room_coor.add(to_suite_room);
+
+      to_twin_bathroom = new PANOLENS.Infospot(300, "assets/img/26.png");
+      to_twin_bathroom.position.set(-1400, -770, -1390);
+      to_twin_bathroom.name = "Exterior View";
+      to_twin_bathroom.addHoverText("Bathroom");
+      to_twin_bathroom.addEventListener("click", function () {
+        viewer.setPanorama(twins_room_bathroom);
+      });
+
+      twins_room_main.add(to_twin_bathroom);
+
+      // to_twin_outside = new PANOLENS.Infospot(300, "assets/img/27.png");
+      // to_twin_outside.position.set(-3100, -770, -90);
+      // to_twin_outside.name = "Exterior View";
+      // to_twin_outside.addHoverText("Towards Room Corridor");
+      // to_twin_outside.addEventListener("click", function() {
+      //     viewer.setPanorama(towards_room_coor);
+      // });
+
+      // twins_room_main.add(to_twin_outside);
+
+      to_suite_bathroom = new PANOLENS.Infospot(300, "assets/img/28.png");
+      to_suite_bathroom.position.set(-1500, -770, 550);
+      to_suite_bathroom.name = "Exterior View";
+      to_suite_bathroom.addHoverText("Executive Suite Bedroom");
+      to_suite_bathroom.addEventListener("click", function () {
+        viewer.setPanorama(suite_room_bathroom);
+      });
+
+      suite_room_main.add(to_suite_bathroom);
+
+      /***  outside hotspots  ***/
+
+      to_outside_from_ball_room = new PANOLENS.Infospot(
+        300,
+        "assets/img/29.png"
+      );
+      to_outside_from_ball_room.position.set(100, -300, 1000);
+      to_outside_from_ball_room.name = "Exterior View";
+      to_outside_from_ball_room.addHoverText("Inspire 2");
+      to_outside_from_ball_room.addEventListener("click", function () {
+        viewer.setPanorama(ball_room_2);
+      });
+
+      ball_room_1.add(to_outside_from_ball_room);
+
+      to_outside_from_buffet_area = new PANOLENS.Infospot(
+        300,
+        "assets/img/30.png"
+      );
+      to_outside_from_buffet_area.position.set(200, -300, 1900);
+      to_outside_from_buffet_area.name = "Exterior View";
+      to_outside_from_buffet_area.addHoverText("Go To lobby");
+      to_outside_from_buffet_area.addEventListener("click", function () {
+        viewer.setPanorama(lobby_main);
+      });
+
+      inside_essence.add(to_outside_from_buffet_area);
+
+      from_spa_to_lobby_outside = new PANOLENS.Infospot(
+        300,
+        "assets/img/31.png"
+      );
+      from_spa_to_lobby_outside.position.set(-1200, -850, 1350);
+      from_spa_to_lobby_outside.name = "Exterior View";
+      from_spa_to_lobby_outside.addHoverText("Go To Lobby");
+      from_spa_to_lobby_outside.addEventListener("click", function () {
+        viewer.setPanorama(lobby_main);
+      });
+
+      spa_main.add(from_spa_to_lobby_outside);
+
+      from_treatment_to_lobby = new PANOLENS.Infospot(300, "assets/img/32.png");
+      from_treatment_to_lobby.position.set(-130, -550, 1000);
+      from_treatment_to_lobby.name = "Exterior View";
+      from_treatment_to_lobby.addHoverText("Gym");
+      from_treatment_to_lobby.addEventListener("click", function () {
+        viewer.setPanorama(gym_and_pool);
+      });
+
+      treatment_room.add(from_treatment_to_lobby);
+
+      from_pool_to_lobby = new PANOLENS.Infospot(300, "assets/img/33.png");
+      from_pool_to_lobby.position.set(-1000, -250, 1050);
+      from_pool_to_lobby.name = "Exterior View";
+      from_pool_to_lobby.addHoverText("Go To Lobby");
+      from_pool_to_lobby.addEventListener("click", function () {
+        viewer.setPanorama(lobby_main);
+      });
+
+      pool_main.add(from_pool_to_lobby);
+
+      from_rang_to_business_corr = new PANOLENS.Infospot(
+        300,
+        "assets/img/34.png"
+      );
+      from_rang_to_business_corr.position.set(-3000, -750, -550);
+      from_rang_to_business_corr.name = "Exterior View";
+      from_rang_to_business_corr.addHoverText("Business Center");
+      from_rang_to_business_corr.addEventListener("click", function () {
+        viewer.setPanorama(business_center);
+      });
+
+      rang_main.add(from_rang_to_business_corr);
+
+      business_corr_to_board_room = new PANOLENS.Infospot(
+        300,
+        "assets/img/35.png"
+      );
+      business_corr_to_board_room.position.set(-1400, -750, -700);
+      business_corr_to_board_room.name = "Exterior View";
+      business_corr_to_board_room.addHoverText("Board Room");
+      business_corr_to_board_room.addEventListener("click", function () {
+        viewer.setPanorama(board_room_main);
+      });
+
+      business_center.add(business_corr_to_board_room);
+
+      from_board_room_to_room_corridor = new PANOLENS.Infospot(
+        300,
+        "assets/img/36.png"
+      );
+      from_board_room_to_room_corridor.position.set(600, -850, 1600);
+      from_board_room_to_room_corridor.name = "Exterior View";
+      from_board_room_to_room_corridor.addHoverText(
+        "Business and Room Corridor"
+      );
+      from_board_room_to_room_corridor.addEventListener("click", function () {
+        viewer.setPanorama(rang_business_main);
+      });
+
+      board_room_main.add(from_board_room_to_room_corridor);
+
+      from_suite_bedroom_to_executive_room = new PANOLENS.Infospot(
+        300,
+        "assets/img/37.png"
+      );
+      from_suite_bedroom_to_executive_room.position.set(1250, -750, 700);
+      from_suite_bedroom_to_executive_room.name = "Exterior View";
+      from_suite_bedroom_to_executive_room.addHoverText(
+        "Executive Suite - Bathroom"
+      );
+      from_suite_bedroom_to_executive_room.addEventListener(
+        "click",
+        function () {
+          viewer.setPanorama(executive_room_inside); // change
+        }
+      );
+
+      suite_room_bathroom.add(from_suite_bedroom_to_executive_room);
+
+      from_executive_bathrooom_to_outside = new PANOLENS.Infospot(
+        300,
+        "assets/img/38.png"
+      );
+      from_executive_bathrooom_to_outside.position.set(-1000, -550, -80);
+      from_executive_bathrooom_to_outside.name = "Exterior View";
+      from_executive_bathrooom_to_outside.addHoverText("Deluxe Twin Room");
+      from_executive_bathrooom_to_outside.addEventListener(
+        "click",
+        function () {
+          viewer.setPanorama(twins_room_main);
+        }
+      );
+
+      executive_room_inside.add(from_executive_bathrooom_to_outside);
+
+      from_room_corridor_to_reception = new PANOLENS.Infospot(
+        300,
+        "assets/img/39.png"
+      );
+      from_room_corridor_to_reception.position.set(1100, -550, -980);
+      from_room_corridor_to_reception.name = "Exterior View";
+      from_room_corridor_to_reception.addHoverText("Reception");
+      from_room_corridor_to_reception.addEventListener("click", function () {
+        viewer.setPanorama(reception);
+      });
+
+      towards_room_coor.add(from_room_corridor_to_reception);
+
+      from_twin_bathroom_to_out = new PANOLENS.Infospot(
+        300,
+        "assets/img/40.png"
+      );
+      from_twin_bathroom_to_out.position.set(-120, -250, 780);
+      from_twin_bathroom_to_out.name = "Go out";
+      from_twin_bathroom_to_out.addHoverText("Deluxe King Room"); //outside
+      from_twin_bathroom_to_out.addEventListener("click", function () {
+        viewer.setPanorama(executive_room_main);
+      });
+
+      twins_room_bathroom.add(from_twin_bathroom_to_out);
+
+      from_ball_room_4_to_ball_room_1 = new PANOLENS.Infospot(
+        300,
+        "assets/img/41.png"
+      );
+      from_ball_room_4_to_ball_room_1.position.set(-880, -350, 550);
+      from_ball_room_4_to_ball_room_1.name = "Go out";
+      from_ball_room_4_to_ball_room_1.addHoverText("Inspire 1");
+      from_ball_room_4_to_ball_room_1.addEventListener("click", function () {
+        viewer.setPanorama(ball_room_1);
+      });
+      ball_room_4.add(from_ball_room_4_to_ball_room_1);
+
+      from_ball_room_2_to_ball_room_3 = new PANOLENS.Infospot(
+        300,
+        "assets/img/42.png"
+      );
+      from_ball_room_2_to_ball_room_3.position.set(450, -390, 950);
+      from_ball_room_2_to_ball_room_3.name = "Go out";
+      from_ball_room_2_to_ball_room_3.addHoverText("Inspire 3");
+      from_ball_room_2_to_ball_room_3.addEventListener("click", function () {
+        viewer.setPanorama(ball_room_3);
+      });
+      ball_room_2.add(from_ball_room_2_to_ball_room_3);
+
+      from_ball_room_3_to_reception = new PANOLENS.Infospot(
+        300,
+        "assets/img/43.png"
+      );
+      from_ball_room_3_to_reception.position.set(280, -390, 1350);
+      from_ball_room_3_to_reception.name = "Go out";
+      from_ball_room_3_to_reception.addHoverText("Go to reception");
+      from_ball_room_3_to_reception.addEventListener("click", function () {
+        viewer.setPanorama(reception);
+      });
+      ball_room_3.add(from_ball_room_3_to_reception);
+
+      from_executive_suite_to_bathroom = new PANOLENS.Infospot(
+        300,
+        "assets/img/44.png"
+      );
+      from_executive_suite_to_bathroom.position.set(400, -490, 1250);
+      from_executive_suite_to_bathroom.name = "Go out";
+      from_executive_suite_to_bathroom.addHoverText("Go Outside");
+      from_executive_suite_to_bathroom.addEventListener("click", function () {
+        viewer.setPanorama(towards_room_coor);
+      });
+      executive_suite_room.add(from_executive_suite_to_bathroom);
+
+      const viewer = new PANOLENS.Viewer({
+        output: "console",
+        horizontalView: false,
+        cameraFov: 85,
+        controlButtons: [],
+      });
+
+      viewer.add(
+        main_entrance,
+        inside_poarch,
+        reception,
+        aroma_main,
+        aroma_1,
+        ball_room,
+        ball_room_1,
+        ball_room_2,
+        ball_room_3,
+        ball_room_4,
+        lobby_main,
+        spa_main,
+        board_room_main,
+        rang_main,
+        essence_main,
+        inside_essence,
+        gym_and_pool,
+        treatment_room,
+        pool_main,
+        rang_business_main,
+        business_center,
+        towards_room_coor,
+        executive_room_main,
+        executive_room_inside,
+        twins_room_main,
+        twins_room_bathroom,
+        suite_room_main,
+        suite_room_bathroom,
+        executive_suite_room
+      );
+      viewer.OrbitControls.noZoom = false;
+
+      // var xposition=3871.39;
+      function moveLeft() {
+        viewer.OrbitControls.rotateLeft(-120);
+      }
+
+      function moveRight() {
+        viewer.OrbitControls.rotateLeft(120);
+      }
+
+      function moveDown() {
+        viewer.OrbitControls.rotateUp(0.5);
+      }
+
+      function moveUp() {
+        viewer.OrbitControls.rotateUp(-0.5);
+      }
+
+      function zoomForward() {
+        var fov = viewer.getCamera().fov - 10;
+        // viewer.getCamera().fov
+        viewer.getCamera().fov = fov;
+        viewer.getCamera().updateProjectionMatrix();
+      }
+
+      function zoomBackward() {
+        var fov = viewer.getCamera().fov + 10;
+        // viewer.getCamera().fov
+        viewer.getCamera().fov = fov;
+        viewer.getCamera().updateProjectionMatrix();
+      }
+
+      function hideBottom() {
+        var bottomBar = document.getElementById("bottomBar");
+        bottomBar.style.display = "none";
+        var bottomBarShowButton = document.getElementById("showBottomBar");
+
+        bottomBarShowButton.style.display = "block";
+        displaySlider = document.getElementById("sync2");
+        displaySlider.style.display = "none";
+      }
+
+      function showBottom() {
+        var bottomBarButton = document.getElementById("showBottomBar");
+        bottomBarButton.style.display = "none";
+
+        var bottomBar = document.getElementById("bottomBar");
+        bottomBar.style.display = "flex";
+      }
+
+      var isVR = false;
+
+      function VRToggle() {
+        if (isVR) {
+          viewer.disableEffect();
+          isVR = false;
+        } else {
+          viewer.enableEffect(PANOLENS.MODES.CARDBOARD);
+          isVR = true;
+        }
+      }
+
+      /* View in fullscreen */
+      var elem = document.documentElement;
+
+      function openFullscreen() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          /* Safari */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          /* IE11 */
+          elem.msRequestFullscreen();
+        }
+        var showFullScreenButton = document.getElementById("fullscreen");
+        showFullScreenButton.style.display = "none";
+
+        var showCloseScreenButton = document.getElementById("closescreen");
+        showCloseScreenButton.style.display = "inline";
+      }
+
+      /* Close fullscreen */
+      function closeFullscreen() {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          /* Safari */
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          /* IE11 */
+          document.msExitFullscreen();
+        }
+        var showFullScreenButton = document.getElementById("fullscreen");
+        showFullScreenButton.style.display = "inline";
+
+        var showCloseScreenButton = document.getElementById("closescreen");
+        showCloseScreenButton.style.display = "none";
+      }
+
+      var isShowSlider = true;
+
+      function showSlider() {
+        if (isShowSlider) {
+          displaySlider = document.getElementById("sync2");
+          displaySlider.style.display = "block";
+          isShowSlider = false;
+        } else {
+          displaySlider = document.getElementById("sync2");
+          displaySlider.style.display = "none";
+          isShowSlider = true;
+        }
+      }
+
+      // Change Image on button click slider
+      var images_index = 0;
+
+      function nextImage() {
+        if (images_index < 27) images_index++;
+        console.warn(images_index);
+
+        changePanoramaFromNextandPrevious();
+      }
+
+      function prevImage() {
+        if (images_index > 0) images_index--;
+        //console.log(images_index);
+        changePanoramaFromNextandPrevious();
+      }
+
+      function changePanoramaFromNextandPrevious(from = -1) {
+        //console.log(">>>", from);
+        if (from != -1) images_index = parseInt(from);
+        switch (images_index) {
+          case 0:
+            viewer.setPanorama(main_entrance);
+            break;
+          case 1:
+            viewer.setPanorama(inside_poarch);
+            break;
+          case 2:
+            viewer.setPanorama(reception);
+            break;
+          case 3:
+            viewer.setPanorama(ball_room);
+            break;
+          case 4:
+            viewer.setPanorama(ball_room_4);
+            break;
+          case 5:
+            viewer.setPanorama(ball_room_1);
+            break;
+          case 6:
+            viewer.setPanorama(ball_room_2);
+            break;
+          case 7:
+            viewer.setPanorama(ball_room_3);
+            break;
+          case 8:
+            viewer.setPanorama(lobby_main);
+            break;
+          case 9:
+            viewer.setPanorama(aroma_main);
+            break;
+          case 10:
+            viewer.setPanorama(essence_main);
+            break;
+          case 11:
+            viewer.setPanorama(inside_essence);
+            break;
+          case 12:
+            viewer.setPanorama(spa_main);
+            break;
+          case 13:
+            viewer.setPanorama(treatment_room);
+            break;
+          case 14:
+            viewer.setPanorama(gym_and_pool);
+            break;
+          case 15:
+            viewer.setPanorama(pool_main);
+            break;
+          case 16:
+            viewer.setPanorama(rang_business_main);
+            break;
+          case 17:
+            viewer.setPanorama(rang_main);
+            break;
+          case 18:
+            viewer.setPanorama(board_room_main);
+            break;
+          case 19:
+            viewer.setPanorama(business_center);
+            break;
+          case 20:
+            viewer.setPanorama(towards_room_coor);
+            break;
+          case 21:
+            viewer.setPanorama(suite_room_main);
+            break;
+          case 22:
+            viewer.setPanorama(suite_room_bathroom);
+            break;
+          case 23:
+            viewer.setPanorama(executive_room_inside);
+            break;
+          case 24:
+            viewer.setPanorama(twins_room_main);
+            break;
+          case 25:
+            viewer.setPanorama(twins_room_bathroom);
+            break;
+          case 26:
+            viewer.setPanorama(executive_room_main);
+            break;
+          case 27:
+            viewer.setPanorama(executive_suite_room);
+            break;
+
+          default:
+          //console.log("does not match")
+        }
+      }
+    </script>
+
+    <div class="icon_botm_wrp" id="bottomBar">
+      <div class="icon_botm_left">
+        <a onclick="prevImage()"><i class="fas fa-backward prev"></i></a>
+        <a onclick="showSlider()"><i class="fas fa-th-large"></i></a>
+      </div>
+      <div class="icon_botm_center">
+        <a onclick="moveLeft()"><i class="fas fa-arrow-left"></i></a>
+        <a onclick="moveRight()"><i class="fas fa-arrow-right"></i></a>
+        <a onclick="moveUp()"><i class="fas fa-arrow-up"></i></a>
+        <a onclick="moveDown()"><i class="fas fa-arrow-down"></i></a>
+        <a onclick="zoomForward()"><i class="fas fa-plus"></i></a>
+        <a onclick="zoomBackward()"><i class="fas fa-minus"></i></a>
+        <a onclick="VRToggle()"><i class="fas fa-vr-cardboard"></i></a>
+      </div>
+      <div class="icon_botm_right">
+        <a onclick="openFullscreen()" id="fullscreen"
+          ><i class="fas fa-expand-arrows-alt"></i
+        ></a>
+        <a onclick="closeFullscreen()" style="display: none" id="closescreen"
+          ><i class="fas fa-compress"></i
+        ></a>
+        <a onclick="hideBottom()"><i class="fas fa-chevron-circle-down"></i></a>
+        <a onclick="nextImage()"><i class="fas fa-forward next"></i></a>
+      </div>
+    </div>
+    <div class="bottom_center_arrow" id="showBottomBar">
+      <a onclick="showBottom()"><i class="fas fa-chevron-circle-up"></i></a>
+    </div>
+
+    <a
+      class="botm_download_btn"
+      href="./assets/pdf/Crowne_plaza_pdf.pdf"
+      target="_blank"
+      ><i class="fas fa-arrow-alt-circle-down"></i
+    ></a>
+    <script src="./index.js"></script>
+  </body>
+</html>
