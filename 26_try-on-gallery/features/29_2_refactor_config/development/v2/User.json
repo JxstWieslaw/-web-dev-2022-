@@ -1,0 +1,19 @@
+{
+    "data": {
+        "settings": {
+            "isFirstTimeExperienceDisabled": true
+        },
+        "campaigns": [],
+        "assets": [],
+        "wallets": [],
+        "_id": "62b2afee48960be56ea66f1c",
+        "email": "wiesysams@gmail.com",
+        "createdAt": "2022-06-22T06:00:14.095Z",
+        "externalId": "7ea41dde-2ebb-4c7d-9422-0cc70b0642c1",
+        "name": "wiesysams",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI2YjM2MWE4NS00ZTg5LTRiZTItOTFkMy1iZjVjNTVhMzNiMjUiLCJpYXQiOjE2NTYwNTcwMTIsImlzcyI6ImFjbWUuY29tIiwic3ViIjoiN2VhNDFkZGUtMmViYi00YzdkLTk0MjItMGNjNzBiMDY0MmMxIiwianRpIjoiZDBkN2U2NWQtZTM1Ni00OTEyLThjODUtYTc0Yzk2ZWI3N2FlIiwiYXV0aGVudGljYXRpb25UeXBlIjoiUEFTU1dPUkRMRVNTIiwiZW1haWwiOiJ3aWVzeXNhbXNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6IndpZXN5c2FtcyIsImFwcGxpY2F0aW9uSWQiOiI2YjM2MWE4NS00ZTg5LTRiZTItOTFkMy1iZjVjNTVhMzNiMjUiLCJyb2xlcyI6WyJyZWd1bGFyIHVzZXIiXSwidXNlcklkIjoiNjJiMmFmZWU0ODk2MGJlNTZlYTY2ZjFjIiwiYWJpbGl0eSI6W1sibWFuYWdlIiwiQXZhdGFyIix7InVzZXJJZCI6IjYyYjJhZmVlNDg5NjBiZTU2ZWE2NmYxYyJ9XSxbIm1hbmFnZSIsIlVzZXIiLHsiX2lkIjoiNjJiMmFmZWU0ODk2MGJlNTZlYTY2ZjFjIn1dLFsicmVhZCx1c2UiLCJBc3NldCIseyJwcmVtaXVtIjpmYWxzZX1dLFsicmVhZCIsIlBhcnRuZXIiXV0sImV4cCI6MTY1NjA1NzkxMn0.H0HvvR27nkKbHUfQqqQ8T-ZwYuGe59nTiA6S8cpGNTA",
+        "refreshToken": "03BJQpHZGrjRME7OdSJ5rMtg0epL4mnc2gYQH6K9hKOe9rHK2Ufxtg",
+        "isLoggedIn": true,
+        "isAnonymous": false
+    }
+}

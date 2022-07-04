@@ -1,0 +1,62 @@
+{
+  "name": "production",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@react-oauth/google": "^0.2.1",
+    "@react-three/drei": "^9.7.1",
+    "@react-three/fiber": "^8.0.14",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
+    "buffer": "^6.0.3",
+    "classnames": "^2.2.6",
+    "dotenv": "^16.0.0",
+    "file-saver": "^2.0.5",
+    "js-cookie": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.15",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-facebook-login": "^4.1.1",
+    "react-ga": "^2.7.0",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "4.0.3",
+    "react-toastify": "^5.5.0",
+    "redux": "^4.2.0",
+    "sass": "^1.49.7",
+    "three": "^0.140.2",
+    "three-gltf-exporter": "0.0.1"
+  },
+  "browser": {
+    "crypto": false
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

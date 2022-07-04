@@ -1,0 +1,34 @@
+html,
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: whitesmoke;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* canvas {
+    position: absolute;
+    top: ;
+    width: 0;
+    height: 0;
+} */
+
+ canvas {
+  position: absolute !important;
+  width: 656px !important;
+  height: 656px !important;
+ /* background:white;
+  box-shadow:  10px 15px 15px 6px #aec7d1;
+  border-radius: 0px;
+  margin-bottom:20px;  */
+} 
