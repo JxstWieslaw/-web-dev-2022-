@@ -324,7 +324,7 @@ function resizeRendererToDisplaySize(renderer) {
 var animate = function () {
   //speed ofrotation
   if (banner && isRotation) {
-    group.rotation.y = (group.rotation.y + 0.009) % (2 * Math.PI);
+    group.rotation.y = (group.rotation.y + 0.01) % (2 * Math.PI);
     //planeMesh.rotation.y = (banner.rotation.y + 0.00138) % (2*Math.PI);
   }
 
@@ -389,7 +389,6 @@ var animate = function () {
       //   .start();
       console.log(group);
       // setTimeout(()=>{
-
       // },1500)
     }
 
